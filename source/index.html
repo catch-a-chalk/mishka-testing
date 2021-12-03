@@ -7,7 +7,7 @@
 <body class="page__body">
 
   <header class="page-header">
-    <a class="page-header__logo">
+    <a class="page-header__logo" href="#">
       <img src="img/logotype-mobile.svg" width="86" height="35" alt="Мишка - вязаные изделия ручной работы">
     </a>
     <nav class="main-nav">
@@ -93,7 +93,7 @@
         <img src="img/triple-set-mobile.jpg" width="260" height="315" alt="Сет из трех корзин">
         <div class="main-featured__wrapper-bottom">
           <p class="main-featured__price">Цена: 990 руб.</p>
-          <button class="button" type="button">ЗАКАЗАТЬ</button>
+          <a class="main-featured__button button" href="#">ЗАКАЗАТЬ</a>
         </div>
       </div>
     </section>
@@ -101,7 +101,7 @@
     <section class="about">
       <div class="about__wrapper">
         <h2 class="about__title">Коротко о нас</h2>
-        <ul class="about-advantages__list">
+        <ul class="about-advantages">
           <li class="about-advantages__item about-advantages__item--eco">
             <h3 class="about-advantages__description">Экологически<br>чистые материалы</h3>
           </li>
@@ -122,7 +122,7 @@
           </li>
         </ul>
         <h2 class="about__title">Отзывы</h2>
-        <div class="about-feedback__list slider__list">
+        <div class="about-feedback slider">
           <blockquote class="about-feedback__item slider__item">
             <div class="about-feedback__author-info">
               <p class="about-feedback__text">
@@ -137,21 +137,21 @@
                 набирают больше лайков!
               </p>
               <cite class="about-feedback__author-data">
-                <p class="about-feedback__author-name">Анастасия Красильникова</p>
-                <p class="about-feedback__author-instagram">@misssssiskras</p>
+                <span class="about-feedback__author-name">Анастасия Красильникова</span>
+                <span class="about-feedback__author-instagram">@misssssiskras</span>
               </cite>
             </div>
           </blockquote>
         </div>
-        <p class="about-feedback__toggle">
-          <button class="about-feedback__button about-feedback__button--left" type="button">
+        <p class="about-feedback-toggle">
+          <button class="about-feedback-button about-feedback-button--left" type="button">
             <span class="visially-hidden">Предыдущий комментарий</span>
           </button>
-          <button class="about-feedback__button about-feedback__button--right" type="button">
+          <button class="about-feedback-button about-feedback-button--right" type="button">
             <span class="visially-hidden">Следующий комментарий</span>
           </button>
         </p>
-        <a class="about-feedback__link button">НАПИСАТЬ</a>
+        <a class="about-feedback-link button" href="#">НАПИСАТЬ</a>
       </div>
     </section>
 
@@ -183,6 +183,7 @@
       </div>
     </section>
   </main>
+
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__logo page-footer__logo--mobile"></div>
