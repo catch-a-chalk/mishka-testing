@@ -1,11 +1,21 @@
 .main-nav {
   background-color: @base-bg-color;
+  outline: 5px solid #ff0000;
+  outline-offset: -5px;
 }
 
 .main-nav__toggle {
   border: none;
   background: transparent;
   padding: 32px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -25,18 +35,19 @@
   }
 }
 
-.main-nav__popover {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.main-nav__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
 }
 
-// page-header--form
 .main-nav__wrapper--form {
   position: absolute;
   width: 1px;

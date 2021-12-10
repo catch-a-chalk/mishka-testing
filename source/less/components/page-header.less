@@ -1,3 +1,18 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   background-color: @base-bg-color;
+  color: @font-regular;
+}
+
+.page-header__logo {
+  height: 79px;
+
+  @media (min-width: @tablet-width) {
+    height: 89px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 89px;
+  }
 }
