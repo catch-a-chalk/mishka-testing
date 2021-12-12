@@ -4,6 +4,18 @@
   padding-right: 30px;
   padding-bottom: 52px;
   margin-bottom: 31px;
+
+  @media (min-width: @mobile-width-only) {
+    height: 795px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 758px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 763px;
+  }
 }
 
 .main-featured-header {
@@ -48,6 +60,28 @@
     padding: 0;
     margin: 0;
     color: @darken-blue-black;
+  }
+}
+
+.main-featured__image {
+  margin: 0 auto;
+
+  @media (min-width: @mobile-width-only) {
+    background-image: url("../../img/triple-set-mobile.jpg");
+    width: 260px;
+    height: 315px;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/triple-set-tablet.jpg");
+    width: 334px;
+    height: 404px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/triple-set-desktop.jpg");
+    width: 525px;
+    height: 636px;
   }
 }
 

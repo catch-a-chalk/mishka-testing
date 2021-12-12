@@ -3,10 +3,21 @@
   flex-direction: column;
   background-color: @base-bg-color;
   color: @font-regular;
+
+  @media (min-width: @mobile-width-only) {
+    border-top: 1px solid @thin-grey-line;
+    border-bottom: 1px solid @thin-grey-line;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
 }
 
 .page-header__logo {
-  height: 79px;
+  @media (min-width: @mobile-width-only) {
+    height: 79px;
+  }
 
   @media (min-width: @tablet-width) {
     height: 89px;

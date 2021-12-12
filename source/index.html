@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>Мишка - вязаные милые штучки ручной работы</title>
 </head>
@@ -19,29 +20,40 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <!-- Задать спрайты в дальнейшем-->
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <a class="user-list__login" href="login.html">
-              <svg class="user-list__search-icon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a class="user-list__link" href="login.html">
+              <svg class="user-list__icon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity=".2" d="m17.7 16.06-3.48-3.48a7.63 7.63 0 0 0 1.53-4.7c0-4.4-3.48-7.88-7.88-7.88A7.81 7.81 0 0 0 0 7.88c0 4.4 3.48 7.87 7.88 7.87 1.73 0 3.37-.61 4.7-1.53l3.48 3.47c.2.2.4.31.82.31.6 0 1.12-.51 1.12-1.13 0-.2-.1-.5-.3-.81ZM2.24 7.88a5.67 5.67 0 0 1 5.63-5.63 5.67 5.67 0 0 1 5.62 5.63 5.67 5.67 0 0 1-5.63 5.62 5.67 5.67 0 0 1-5.62-5.63Z" fill="#000"/>
-              </svg>Поиск по сайту
+              </svg>
             </a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__login" href="search.html">
-              <svg width="21" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a class="user-list__link" href="search.html">
+              <svg class="user-list__icon" width="21" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity=".2" d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z" fill="#000"/>
               </svg>Корзина: пока пуста
             </a>
           </li>
         </ul>
+        <ul class="main-nav__list main-nav__list--sub">
+          <li class="page-list__item">
+            <a href="#">Новые поступления</a>
+          </li>
+          <li class="page-list__item">
+            <a href="#">Распродажа</a>
+          </li>
+        </ul>
+        <div class="main-nav__list main-nav__list--option">
+          Бесплатная доставка по России
+        </div>
       </div>
     </nav>
   </header>
@@ -50,28 +62,19 @@
     <h1 class="visually-hidden">Мишка - с заботой о домашнем уюте</h1>
     <section class="main-header">
       <div class="main-header__wrapper">
-        <nav class="main-header-nav main-header-nav--mobile">
-          <ul class="main-header-nav__list page-list">
-            <li class="page-list__item">
-              <a href="#">Новые поступления</a>
-            </li>
-            <li class="page-list__item">
-              <a href="#">Распродажа</a>
-            </li>
-          </ul>
-          <div class="main-header-nav__list delivery-list">
-            Бесплатная доставка по России
-          </div>
-        </nav>
         <header class="main-header-header">
           <h2 class="main-header__title">Милые штуки ручной работы для дома</h2>
         </header>
-        <div class="main-header__interior">Предметы<br>интерьера
-          <div class="main-header__interior--image"></div>
-        </div>
-        <div class="main-header__toys">Детские<br>игрушки
-          <div class="main-header__toys--image"></div>
-        </div>
+        <ul class="main-header__list">
+          <li class="main-header__item main-header--interior">
+            Предметы<br>интерьера
+            <div class="main-header--interior-image"></div>
+          </li>
+          <li class="main-header__item main-header--toys">
+            Детские<br>игрушки
+            <div class="main-header--toys-image"></div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -96,7 +99,7 @@
             </div>
           </dl>
         </header>
-        <img src="img/triple-set-mobile.jpg" width="260" height="315" alt="Сет из трех корзин">
+        <div class="main-featured__image"></div>
         <div class="main-featured__wrapper-bottom">
           <p class="main-featured__price">Цена: 990 руб.</p>
           <a class="main-featured__button button" href="#">ЗАКАЗАТЬ</a>

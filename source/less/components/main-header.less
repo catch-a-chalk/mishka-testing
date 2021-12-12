@@ -1,12 +1,43 @@
 .main-header {
   background-color: @base-bg-color;
   background-image: url("../../img/hero-mobile.jpg");
+  background-size: auto auto;
   background-repeat: no-repeat;
-  margin-bottom: 31px;
+  margin: 0 auto 31px;
+
+  @media (min-width: @mobile-width-only) {
+    height: 506px;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/hero-tablet.jpg");
+    height: 758px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/hero-desktop.jpg");
+    height: 763px;
+  }
 }
 
-.main-header__interior,
-.main-header__toys {
+.main-header__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 50px;
+  }
+}
+
+.main-header__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-header--interior,
+.main-header--toys {
   position: relative;
   display: block;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -19,11 +50,11 @@
   margin: 0;
 }
 
-.main-header__interior {
+.main-header--interior {
   background-color: @tiffany-lighter;
 }
 
-.main-header__interior--image {
+.main-header--interior-image {
   position: absolute;
   width: 40px;
   height: 62px;
@@ -33,11 +64,11 @@
   right: 36px;
 }
 
-.main-header__toys {
+.main-header--toys {
   background-color: @tiffany-darker;
 }
 
-.main-header__toys--image {
+.main-header--toys-image {
   position: absolute;
   width: 60px;
   height: 60px;

@@ -4,6 +4,18 @@
   font-style: normal;
   color: @font-regular;
   padding-bottom: 39px;
+
+  @media (min-width: @mobile-width-only) {
+    height: 818px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 824px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 457px;
+  }
 }
 
 .contacts__title {
