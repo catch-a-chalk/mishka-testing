@@ -3,30 +3,72 @@
   background-image: url("../../img/hero-mobile.jpg");
   background-size: auto auto;
   background-repeat: no-repeat;
-  margin: 0 auto 31px;
+  background-position: top center;
 
   @media (min-width: @mobile-width-only) {
-    height: 506px;
+    min-height: 506px;
   }
 
   @media (min-width: @tablet-width) {
     background-image: url("../../img/hero-tablet.jpg");
-    height: 758px;
+    min-height: 758px;
   }
 
   @media (min-width: @desktop-width) {
     background-image: url("../../img/hero-desktop.jpg");
-    height: 763px;
+    min-height: 763px;
   }
 }
 
 .main-header__wrapper {
+  min-height: inherit;
+  position: relative;
+
   @media (min-width: @tablet-width) {
     padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 50px;
+  }
+}
+
+.main-header__header {
+  @media (min-width: @mobile-width-only) {
+    position: absolute;
+    top: 92px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 160px;
+    left: 155px;
+    width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 580px;
+    left: 284px;
+  }
+}
+
+.main-header__title {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  color: @font-regular;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -34,6 +76,27 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @mobile-width-only) {
+    min-height: 506px;
+    margin: 0 auto 31px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 746px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: end;
+  }
+  /*
+  @media (min-width: @desktop-width) {
+  }
+  */
 }
 
 .main-header--interior,
@@ -46,8 +109,20 @@
   font-size: 19px;
   line-height: 24px;
   color: @font-white;
-  height: 103px;
   margin: 0;
+
+  @media (min-width: @mobile-width-only) {
+    padding: 24px 50px 27px 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 34px 50px 34px 36px;
+  }
+  /*
+  @media (min-width: @desktop-width) {
+    max-width: 1200px;
+  }
+  */
 }
 
 .main-header--interior {
@@ -76,14 +151,4 @@
   background-repeat: no-repeat;
   top: 21px;
   right: 27px;
-}
-
-.main-header__title {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 27px;
-  line-height: 30px;
-  text-align: center;
-  color: @font-regular;
 }

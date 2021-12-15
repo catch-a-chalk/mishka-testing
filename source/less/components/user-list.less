@@ -1,28 +1,28 @@
 .user-list {
   @media (min-width: @tablet-width) {
     position: absolute;
-    bottom: 57px;
     right: 0;
+    top: -55px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 1fr;
   }
 
   @media (min-width: @desktop-width) {
-    width: 480px;
+    top: -45px;
   }
-  /*
-  outline: 5px solid #00ff00;
-  outline-offset: -5px;
-  */
 }
 
 .user-list__item {
   @media (min-width: @mobile-width-only) {
     border-top: 1px solid @thin-grey-line;
-    padding: 28px 76px 33px;
+    padding: 28px 52px 27px 76px;
+    min-height: 20px;
   }
 
   @media (min-width: @tablet-width) {
     border-top: none;
-    padding: 33px 31px 31px 33px;
+    padding: 0;
   }
   /*
   @media (min-width: @desktop-width) {

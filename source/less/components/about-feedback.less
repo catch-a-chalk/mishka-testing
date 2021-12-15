@@ -1,4 +1,18 @@
+.about-feedback {
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+    margin-top: 39px;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / -1;
+  }
+}
+
 .about-feedback__item {
+  position: relative;
   margin: 0;
 }
 
@@ -8,6 +22,30 @@
   line-height: 30px;
   margin: 0;
   color: @darken-blue-black;
+
+  @media (min-width: @mobile-width-only) {
+    margin-bottom: 33px;
+  }
+  /*
+  @media (min-width: @tablet-width) {
+  }
+
+  @media (min-width: @desktop-width) {
+  }
+  */
+}
+
+.about-feedback__author-data {
+  @media (min-width: @mobile-width-only) {
+    margin-bottom: 30px;
+  }
+  /*
+  @media (min-width: @tablet-width) {
+  }
+
+  @media (min-width: @desktop-width) {
+  }
+  */
 }
 
 .about-feedback__author-name {
@@ -23,6 +61,32 @@
   font-size: 17px;
   line-height: 30px;
   color: @darken-blue-black;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+  /*
+  @media (min-width: @desktop-width) {
+  }
+  */
+}
+
+.about-feedback__toggle {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 4 / 5;
+    grid-row: 5 / 6;
+    justify-content: end;
+    position: relative;
+    top: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 6 / 7;
+    justify-content: center;
+    top: 35px;
+  }
 }
 
 .about-feedback__link {
@@ -32,6 +96,21 @@
   font-size: 18px;
   line-height: 20px;
   color: @darken-blue-black;
+
+  @media (min-width: @mobile-width-only) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+    margin: 0;
+    padding: 16px 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 6 / 7;
+  }
 }
 
 .about-feedback__button {
@@ -44,9 +123,21 @@
 .about-feedback__button--left {
   padding-left: 37px;
   padding-right: 42px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+  }
 }
 
 .about-feedback__button--right {
   padding-left: 42px;
   padding-right: 37px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+  }
 }

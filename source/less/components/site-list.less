@@ -1,31 +1,27 @@
 .site-list {
   @media (min-width: @tablet-width) {
-    width: 570px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 390px;
   }
 
   @media (min-width: @desktop-width) {
     width: 430px;
+    top: -65px;
   }
-  /*
-  outline: 5px solid #00ff00;
-  outline-offset: -5px;
-  */
 }
 
 .site-list__item {
   @media (min-width: @mobile-width-only) {
     border-top: 1px solid @thin-grey-line;
-    padding: 28px 76px 33px;
+    padding: 28px 52px 27px 76px;
   }
 
   @media (min-width: @tablet-width) {
     border-top: none;
     padding: 20px 0;
     margin-right: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 89px;
   }
 }
 
