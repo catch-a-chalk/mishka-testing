@@ -1,11 +1,23 @@
 .main-nav {
   background-color: @base-bg-color;
+  /*
+  outline: 5px solid #ff0000;
+  outline-offset: -5px;
+  */
 }
 
-.main-nav__toggle {
-  border: none;
-  background: transparent;
-  padding: 32px;
+.main-nav__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .main-nav__list {
@@ -13,30 +25,19 @@
   margin: 0;
   padding: 0;
 
-  & a {
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 17px;
-    line-height: 24px;
-    color: @font-regular;
-    text-decoration: none;
-    list-style-type: none;
+  @media (min-width: @mobile-width-only) {
+    display: block;
   }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+  /*
+  @media (min-width: @desktop-width) {
+  }
+  */
 }
 
-.main-nav__popover {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-// page-header--form
 .main-nav__wrapper--form {
   position: absolute;
   width: 1px;
@@ -46,4 +47,53 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.main-nav__list--sub {
+  @media (min-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 260px;
+    position: absolute;
+    top: 20px;
+  }
+}
+
+.main-nav__item a {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
+  list-style-type: none;
+  color: @font-regular;
+}
+
+.main-nav__list--option {
+  @media (min-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: @darken-blue-black;
+  }
+  /*
+  @media (min-width: @desktop-width) {
+  }
+  */
 }

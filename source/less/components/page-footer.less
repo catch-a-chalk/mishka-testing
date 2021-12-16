@@ -2,9 +2,84 @@
   background-color: @base-grey-color;
 }
 
+.page-footer__wrapper {
+  @media (min-width: @mobile-width-only) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+    padding: 25px 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 51px 50px 58px;
+  }
+  /*
+  @media (min-width: @desktop-width) {
+  }
+  */
+}
+
+.page-footer__logo {
+  @media (min-width: @mobile-width-only) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/logotype-footer.svg");
+    background-repeat: no-repeat;
+    width: 102px;
+    height: 34px;
+    position: static;
+  }
+  /*
+  @media (min-width: @desktop-width) {
+  }
+  */
+}
+
+.page-footer__social {
+  @media (min-width: @mobile-width-only) {
+    border-bottom: 1px solid @thin-grey-line;
+  }
+  /*
+  @media (min-width: @tablet-width) {
+  }
+
+  @media (min-width: @desktop-width) {
+  }
+  */
+}
+
 .page-footer__list {
-  display: flex;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @mobile-width-only) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    list-style-type: none;
+    align-items: center;
+    justify-items: center;
+  }
+  /*
+  @media (min-width: @tablet-width) {
+  }
+
+  @media (min-width: @desktop-width) {
+  }
+  */
 }
 
 .page-footer__text {
@@ -14,9 +89,33 @@
   font-size: 19px;
   line-height: 18px;
   color: @font-regular;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 30px;
+  }
+  /*
+  @media (min-width: @desktop-width) {
+  }
+  */
 }
 
 .page-footer__link {
   background-image: url("../../img/insta.svg");
   background-repeat: no-repeat;
+}
+
+.page-footer__copyright {
+  @media (min-width: @mobile-width-only) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+  /*
+  @media (min-width: @desktop-width) {
+  }
+  */
 }

@@ -1,5 +1,18 @@
-.page__body--mobile {
-  max-width: 320px;
+.page__body {
+  width: 100%;
+  min-height: 100%;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: @mobile-width-only) {
+    width: 320px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+  }
 }

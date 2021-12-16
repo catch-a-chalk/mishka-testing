@@ -8,38 +8,6 @@ img {
   height: auto;
 }
 
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("source/fonts/opensansbold.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("source/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("source/fonts/opensans.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("source/fonts/opensans.woff2") format("woff2");
-  font-display: swap;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -55,4 +23,27 @@ img {
   padding: 16px 70px;
   border: 2px solid @darken-blue-black;
   background: transparent;
+}
+
+.button--wide {
+  padding: 16px 45px;
+  border: 2px solid @darken-blue-black;
+  background: transparent;
+}
+
+.zigzag-line {
+  background-image: url("../../img/zigzag-line-mobile.svg");
+  background-repeat: repeat;
+  width: 100%;
+  height: 6px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/zigzag-line-tablet.svg");
+    height: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/zigzag-line-desktop.svg");
+    height: 23px;
+  }
 }

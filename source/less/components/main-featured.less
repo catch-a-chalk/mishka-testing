@@ -1,9 +1,35 @@
 .main-featured {
   background-color: @base-bg-color;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 52px;
-  margin-bottom: 31px;
+
+  @media (min-width: @mobile-width-only) {
+    min-height: 795px;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 520px;
+    margin-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 732px;
+  }
+}
+
+.main-featured__wrapper {
+  @media (min-width: @mobile-width-only) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+  }
+  /*
+  @media (min-width: @desktop-width) {
+    min-height: 763px;
+  */
 }
 
 .main-featured-header {
@@ -11,43 +37,150 @@
   font-style: normal;
   color: @font-regular;
 
-  .main-featured__title {
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 30px;
+  @media (min-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 
-  .main-featured__weekly {
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 30px;
-    color: @tiffany-lighter;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 292px 1fr 1fr;
+    grid-template-rows: 70px 140px 1fr;
   }
 
-  .main-featured__about {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    color: @darken-blue-black;
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(6, 175px);
+    grid-template-rows: 33px 1fr 1fr 1fr;
   }
+}
 
-  .main-featured__list {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-  }
+.main-featured__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
 
-  .main-featured__item {
-    width: 100%;
-  }
-
-  .main-featured__parameter,
-  .main-featured__description {
-    float: left;
-    width: 50%;
-    padding: 0;
+  @media (min-width: @mobile-width-only) {
     margin: 0;
-    color: @darken-blue-black;
+    margin-bottom: 3px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 43px;
+    line-height: 50px;
+    grid-column: 1 / 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+    z-index: 1;
+  }
+}
+
+.main-featured__weekly {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: @tiffany-lighter;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+    width: 80px;
+    justify-self: end;
+    grid-column: 3 / 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: center;
+  }
+}
+
+.main-featured__about {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: @darken-blue-black;
+
+  @media (min-width: @mobile-width-only) {
+    margin-top: 17px;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+  }
+}
+
+.main-featured__list {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+  }
+}
+
+.main-featured__item {
+  width: 100%;
+  padding: 8px 0;
+  border-bottom: 1px solid @thin-grey-line;
+}
+
+.main-featured__parameter,
+.main-featured__description {
+  float: left;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  color: @darken-blue-black;
+}
+
+.main-featured__image {
+  margin: 0 auto;
+
+  @media (min-width: @mobile-width-only) {
+    background-image: url("../../img/triple-set-mobile.jpg");
+    width: 260px;
+    height: 315px;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/triple-set-tablet.jpg");
+    width: 334px;
+    height: 404px;
+    position: absolute;
+    top: 70px;
+    right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/triple-set-desktop.jpg");
+    width: 525px;
+    height: 636px;
+    top: 0;
   }
 }
 
@@ -56,16 +189,52 @@
   font-style: normal;
   font-weight: 700;
 
-  .main-featured__price {
-    font-size: 17px;
-    line-height: 24px;
-    color: @darken-blue-black;
+  @media (min-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .main-featured__button {
-    font-size: 18px;
-    line-height: 20px;
-    color: @darken-blue-black;
-    text-decoration: none;
+  @media (min-width: @tablet-width) {
+    position: relative;
+    left: -187px;
+    top: 55px;
   }
+
+  @media (min-width: @desktop-width) {
+    left: -205px;
+    top: 125px;
+  }
+}
+
+.main-featured__price {
+  font-size: 17px;
+  line-height: 24px;
+  color: @darken-blue-black;
+
+  @media (min-width: @mobile-width-only) {
+    margin: 25px 0;
+    width: inherit;
+  }
+  /*
+  @media (min-width: @tablet-width) {
+  }
+
+  @media (min-width: @desktop-width) {
+  }*/
+}
+
+.main-featured__button {
+  font-size: 18px;
+  line-height: 20px;
+  color: @darken-blue-black;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 16px 100px;
+  }
+
+  /*
+  @media (min-width: @desktop-width) {
+  }*/
 }
