@@ -9,6 +9,19 @@
   font-size: 27px;
   line-height: 30px;
   color: @font-regular;
-  margin-top: 0;
-  margin-bottom: 17px;
+  margin: 0;
+
+  @media (min-width: @mobile-width-only) {
+    padding: 74px 22px;
+    text-align: center;
+  }
+  /*
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+  }
+  */
 }
