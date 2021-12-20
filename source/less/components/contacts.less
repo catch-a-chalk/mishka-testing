@@ -36,7 +36,7 @@
   @media (min-width: @desktop-width) {
     min-height: 457px;
     display: grid;
-    grid-template-columns: repeat(6, 175px);
+    grid-template-columns: 175px 230px 120px 175px 175px 175px;
     grid-template-rows: 95px 80px 228px 52px;
   }
 }
@@ -164,17 +164,12 @@
     display: inline-block;
     position: relative;
     left: 240px;
+    padding: 16px 28px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 2 / 4;
+    position: static;
+    grid-column: 2 / 3;
     grid-row: 4 / 5;
-    left: 0;
-  }
-}
-
-.contacts__link .button {
-  @media (min-width: @tablet-width) {
-    padding: 16px 28px;
   }
 }
