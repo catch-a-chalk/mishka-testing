@@ -1,14 +1,17 @@
 .site-list {
   @media (min-width: @tablet-width) {
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     width: 390px;
+    background-color: @header-bg-color;
   }
 
   @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     width: 430px;
     top: -65px;
+    background-color: transparent;
   }
 }
 

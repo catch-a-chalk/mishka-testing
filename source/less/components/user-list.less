@@ -1,8 +1,7 @@
 .user-list {
   @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 0;
-    top: -55px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     display: grid;
     grid-template-columns: 80px 1fr;
     grid-template-rows: 1fr;
@@ -10,6 +9,8 @@
 
   @media (min-width: @desktop-width) {
     top: -45px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
   }
 }
 

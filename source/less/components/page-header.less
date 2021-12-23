@@ -31,6 +31,7 @@
     height: 46px;
     margin-left: 0;
     margin-right: auto;
+    position: absolute;
   }
 
   @media (min-width: @desktop-width) {
@@ -38,21 +39,26 @@
     width: 149px;
     height: 72px;
     margin: 0 auto;
+    left: 43%;
+    top: 10px;
   }
 }
 
 .page-header__toggle {
   position: absolute;
   right: 0;
+  width: 80px;
+  height: 80px;
   border: none;
-  background: transparent;
-  padding: 32px;
-
-  @media (min-width: @tablet-width) {
-    display: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
+  /*
+  &:active,
+  &:hover {
   }
-
-  @media (min-width: @desktop-width) {
+  */
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
