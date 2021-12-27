@@ -10,13 +10,15 @@
 
     <header class="page-header">
       <a class="page-header__logo" href="#"></a>
-      <button class="page-header__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-        <!--<svg width="20" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 0H0v2h20V0ZM20 6H0v2h20V6ZM20 12H0v2h20v-2Z" fill="#231F20"/></svg>
-        -->
-      </button>
       <!-- Можно добавить класс main-nav--closed -->
-      <nav class="main-nav">
+      <!-- Можно добавить класс main-nav--opened -->
+      <!-- Можно добавить класс main-nav--nojs -->
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <!--<svg width="20" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 0H0v2h20V0ZM20 6H0v2h20V6ZM20 12H0v2h20v-2Z" fill="#231F20"/></svg>
+          -->
+        </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -57,13 +59,29 @@
         </div>
       </nav>
     </header>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 
     <main class="page-main">
       <h1 class="visually-hidden">Мишка - с заботой о домашнем уюте</h1>
       <section class="main-header">
         <div class="main-header__wrapper">
           <header class="main-header__header">
-            <h2 class="main-header__title">Милые штуки ручной работы для дома</h2>
+            <h2 class="main-header__title">Милые штуки <span class="main-header__span">ручной</span> работы для дома</h2>
           </header>
           <ul class="main-header__list">
             <li class="main-header__item main-header--interior">
@@ -98,12 +116,12 @@
                 <dd class="main-featured__description">15 см</dd>
               </div>
             </dl>
+            <div class="main-featured__wrapper-bottom">
+              <p class="main-featured__price">Цена: 990 руб.</p>
+              <a class="main-featured__button button" href="#">ЗАКАЗАТЬ</a>
+            </div>
           </header>
           <div class="main-featured__image"></div>
-          <div class="main-featured__wrapper-bottom">
-            <p class="main-featured__price">Цена: 990 руб.</p>
-            <a class="main-featured__button button" href="#">ЗАКАЗАТЬ</a>
-          </div>
         </div>
       </section>
       <div class="zigzag-line"></div>

@@ -4,7 +4,7 @@
   font-style: normal;
   color: @font-regular;
 
-  @media (min-width: @mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
     min-height: 818px;
     margin-top: 38px;
   }
@@ -20,7 +20,7 @@
 }
 
 .contacts__wrapper {
-  @media (min-width: @mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
     min-height: 818px;
     margin-top: 38px;
     padding-left: 30px;
@@ -66,6 +66,7 @@
     height: 81px;
     position: absolute;
     right: 0;
+    top: -20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -78,9 +79,9 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
+  display: grid;
 
-  @media (min-width: @mobile-width-only) {
-    display: grid;
+  @media (max-width: @mobile-width-only) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
@@ -101,10 +102,13 @@
 
 .contacts__item {
   width: 100%;
+  display: grid;
+  grid-template-columns: 85px 1fr;
+}
 
-  @media (min-width: @mobile-width-only) {
-    display: grid;
-    grid-template-columns: 85px 1fr;
+.contacts__item:not(:last-child) {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 30px;
   }
 }
 
@@ -117,27 +121,41 @@
   }
 }
 
+.contacts__parameter {
+  @media (min-width: @tablet-width) {
+  }
+}
+
 .contacts__description a {
   text-decoration: none;
   color: @darken-blue-black;
 }
 
+a[href^="info@mimimishkashop.ru"] {
+  padding-bottom: 5px;
+  border-bottom: 1px solid @tiffany-link;
+}
+
 .contacts__map {
-  @media (min-width: @mobile-width-only) {
+  background-repeat: no-repeat;
+
+  @media (max-width: @mobile-width-only) {
     background-image: url("../../img/map-mobile.jpg");
     width: 320px;
     height: 454px;
-    position: relative;
-    right: 30px;
+    margin-right: auto;
     margin-bottom: 42px;
+    margin-left: auto;
   }
 
   @media (min-width: @tablet-width) {
     background-image: url("../../img/map-tablet.jpg");
     width: 768px;
     height: 457px;
+    position: relative;
     right: 50px;
     margin-top: 60px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -164,6 +182,9 @@
   @media (min-width: @tablet-width) {
     padding: 16px 28px;
     margin-bottom: 57px;
+    display: inline-block;
+    position: relative;
+    left: 33%;
   }
 
   @media (min-width: @desktop-width) {

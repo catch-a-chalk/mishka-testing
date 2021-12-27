@@ -5,7 +5,7 @@
   background-color: @base-bg-color;
   color: @font-regular;
 
-  @media (min-width: @mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
     border-top: 1px solid @thin-grey-line;
     border-bottom: 1px solid @thin-grey-line;
   }
@@ -17,7 +17,7 @@
 }
 
 .page-header__logo {
-  @media (min-width: @mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
     background-image: url("../../img/logotype-mobile.svg");
     background-repeat: no-repeat;
     width: 86px;
@@ -32,6 +32,7 @@
     margin-left: 0;
     margin-right: auto;
     position: absolute;
+    top: 22px;
   }
 
   @media (min-width: @desktop-width) {
@@ -41,24 +42,5 @@
     margin: 0 auto;
     left: 43%;
     top: 10px;
-  }
-}
-
-.page-header__toggle {
-  position: absolute;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 2;
-  /*
-  &:active,
-  &:hover {
-  }
-  */
-  @media (min-width: @tablet-width) {
-    display: none;
   }
 }
