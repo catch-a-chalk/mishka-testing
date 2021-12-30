@@ -1,8 +1,7 @@
 .user-list {
   @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 0;
-    top: -55px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     display: grid;
     grid-template-columns: 80px 1fr;
     grid-template-rows: 1fr;
@@ -10,11 +9,13 @@
 
   @media (min-width: @desktop-width) {
     top: -45px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
   }
 }
 
 .user-list__item {
-  @media (min-width: @mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
     border-top: 1px solid @thin-grey-line;
     padding: 28px 52px 27px 76px;
     min-height: 20px;
@@ -24,10 +25,22 @@
     border-top: none;
     padding: 0;
   }
-  /*
-  @media (min-width: @desktop-width) {
+}
+
+.user-list__item:first-child {
+  @media (min-width: @tablet-width) {
+    text-align: end;
   }
-  */
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
+
+.user-list__item:last-child {
+  @media (min-width: @tablet-width) {
+    text-align: end;
+  }
 }
 
 .user-list__link {
@@ -42,7 +55,7 @@
 }
 
 .user-list__item:first-child::after {
-  @media (min-width: @mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
     content: "Поиск по сайту";
     position: absolute;
     display: block;
@@ -67,8 +80,14 @@
 .user-list__icon {
   position: absolute;
 
-  @media (min-width: @mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
     left: -41px;
     top: -2px;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    right: 40px;
+    top: 2px;
   }
 }
