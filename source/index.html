@@ -9,7 +9,13 @@
   <body class="page__body">
 
     <header class="page-header">
-      <a class="page-header__logo" href="#"></a>
+      <a class="page-header__logo" href="#">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg" width="149" height="72">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg" width="113" height="46">
+          <img src="img/logotype-mobile.svg" width="86" height="35" alt="Мастерская Мишка">
+        </picture>
+      </a>
       <!-- Можно добавить класс main-nav--closed -->
       <!-- Можно добавить класс main-nav--opened -->
       <!-- Можно добавить класс main-nav--nojs -->
@@ -116,7 +122,13 @@
                 <dd class="main-featured__description">15 см</dd>
               </div>
             </dl>
-            <div class="main-featured__image"></div>
+            <p class="main-featured__image">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x" width="525" height="636">
+                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x" width="334" height="404">
+                <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg" width="260" height="315" alt="Вязаные корзинки в разных цветах и размерах">
+              </picture>
+            </p>
             <div class="main-featured__wrapper-bottom">
               <p class="main-featured__price">Цена: 990 руб.</p>
               <a class="main-featured__button button" href="#">ЗАКАЗАТЬ</a>
