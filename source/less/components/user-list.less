@@ -52,6 +52,15 @@
   line-height: 24px;
   color: @font-regular;
   text-decoration: none;
+
+  &:hover .user-list__text {
+    opacity: 0.6;
+  }
+
+  &:hover .user-list__icon {
+    opacity: 1;
+    fill: @tiffany-lighter;
+  }
 }
 
 .user-list__item:first-child::after {
@@ -79,6 +88,8 @@
 
 .user-list__icon {
   position: absolute;
+  opacity: 0.2;
+  fill: @white-icon;
 
   @media (max-width: @mobile-width-only) {
     left: -41px;

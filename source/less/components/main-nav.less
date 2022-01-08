@@ -1,5 +1,9 @@
 .main-nav {
-  background-color: @base-bg-color;
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    width: 100%;
+    top: 79px;
+  }
 }
 
 @media (max-width: @mobile-width-only) {
@@ -23,7 +27,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
+  top: -79px;
   right: 0;
   width: 80px;
   height: 80px;
@@ -37,8 +41,10 @@
   }
 }
 
+/* Здесь тоггл в открытом состоянии (позиционирование отличается от
+настроек .main-nav__toggle выше, поэтому top продублирован)*/
 .main-nav--opened .main-nav__toggle {
-  top: 0;
+  top: -79px;
   right: 0;
 
   &::before,
@@ -88,6 +94,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  z-index: 2;
+
+  @media (max-width: @mobile-width-only) {
+    background-color: @base-bg-color;
+  }
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -142,15 +153,21 @@
   }
 }
 
-.main-nav__item a {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 15px;
-  line-height: 24px;
-  text-decoration: none;
-  list-style-type: none;
-  color: @font-regular;
+.main-nav__item {
+  a {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 24px;
+    text-decoration: none;
+    list-style-type: none;
+    color: @font-regular;
+  }
+
+  &:hover a {
+    opacity: 0.6;
+  }
 }
 
 .main-nav__list--option {
@@ -159,7 +176,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    background-color: @header-bg-color;
     display: inline-block;
     grid-column: 2 / 3;
     grid-row: 2 / 3;

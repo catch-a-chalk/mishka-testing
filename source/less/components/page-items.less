@@ -7,12 +7,8 @@
 .page-items__wrapper {
   padding-left: 30px;
   padding-right: 30px;
-
-  @media (min-width: @mobile-width-only) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
+  display: grid;
+  grid-template-columns: 1fr;
 
   @media (min-width: @tablet-width) {
     padding-left: 50px;
@@ -20,7 +16,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 51px;
   }
 }

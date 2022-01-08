@@ -81,11 +81,16 @@
 .about__background {
   @media (min-width: @tablet-width) {
     position: absolute;
-    background-image: url("../img/review-feedback-tablet.jpg");
+    background-image: url("../img/review-feedback@1x.jpg");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 350px;
     height: 457px;
     top: 462px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review-feedback@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
