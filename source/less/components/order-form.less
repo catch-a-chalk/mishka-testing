@@ -13,6 +13,11 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(6, 175px);
+  }
 }
 
 .order-form__text {
@@ -21,5 +26,25 @@
   line-height: 24px;
   margin-bottom: 37px;
   color: @darken-blue-black;
-  padding: 0 7px;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 6;
+  }
+}
+
+.order-form__break-tablet {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.order-form__break-desktop {
+  @media (max-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
 }

@@ -100,12 +100,12 @@
         <h2 class="page-title">Вязание на заказ</h2>
         <div class="order-form__wrapper">
           <p class="order-form__text">
-            Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую<br>форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+            Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую <br class="order-form__break-tablet">форму <br class="order-form__break-desktop">заказа и мы свяжемся с вами, чтобы уточнить детали.
           </p>
 
           <!-- Стоит ли оборачивать лейблы в тэг span? -->
           <form class="page-form-filter" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="page-form-filter__group">
+            <fieldset class="page-form-filter__group page-form-filter__group--type">
               <legend class="page-form-filter__title">ТИП</legend>
               <ul class="page-form-filter__list page-form-filter__list--types">
                 <li class="page-form-filter__item">
@@ -175,19 +175,19 @@
 
             <fieldset class="page-form-filter__group page-form-filter__group--name">
               <legend class="page-form-filter__title">ФИО</legend>
-              <p class="page-form-filter__first-name">
+              <p class="page-form-filter__user page-form-filter__user--first-name">
                 <label for="first-name">Имя:</label>
-                <input class="page-form-filter__text-input" type="text" id="first-name" name="first-name"
+                <input class="page-form-filter__text-input page-form-filter__text-input--name" type="text" id="first-name" name="first-name"
                 placeholder="Введите ваше имя*" required>
               </p>
-              <p class="page-form-filter__second-name">
+              <p class="page-form-filter__user page-form-filter__user--second-name">
                 <label for="second-name">Фамилия:</label>
-                <input class="page-form-filter__text-input" type="text" id="second-name"
+                <input class="page-form-filter__text-input page-form-filter__text-input--name" type="text" id="second-name"
                 name="second-name" placeholder="Укажите фамилию*" required>
               </p>
-              <p class="page-form-filter__middle-name">
+              <p class="page-form-filter__user page-form-filter__user--middle-name">
                 <label for="middle-name">Отчество:</label>
-                <input class="page-form-filter__text-input" type="text" id="middle-name"
+                <input class="page-form-filter__text-input page-form-filter__text-input--name" type="text" id="middle-name"
                 name="middle-name" placeholder="Отчество, если желаете">
               </p>
             </fieldset>
@@ -199,6 +199,7 @@
                 <!-- Вставить иконку svg-шкой? -->
                 <input class="page-form-filter__text-input page-form-filter__text-input--phone"
                 type="text" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <span class="page-form__icon page-form__icon--phone"></span>
               </p>
             </fieldset>
 
@@ -209,6 +210,7 @@
                 <!-- Вставить иконку svg-шкой? -->
                 <input class="page-form-filter__text-input page-form-filter__text-input--email"
                 type="text" id="email" name="email" placeholder="Ваш Email*" required>
+                <span class="page-form__icon page-form__icon--email"></span>
               </p>
             </fieldset>
 
@@ -219,10 +221,8 @@
                 <textarea class="page-form-filter__wide" id="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </p>
               <p class="page-form-filter__hint">*Поля обязательны для заполнения</p>
+              <button class="page-form-filter__button button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
             </fieldset>
-            <!-- Обертка задана в целях предотвращения растягивания кнопки вместе с доугими блоками -->
-            <button class="page-form-filter__button button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
-
           </form>
         </div>
       </section>
