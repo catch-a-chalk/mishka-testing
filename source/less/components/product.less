@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    margin-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,65 +15,12 @@
   }
 }
 
-.product:nth-of-type(1) .product__image {
-  background-image: url("../../img/bunny-mobile.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 260px;
-  height: 195px;
-
-  @media (min-width: @tablet-width) {
-    background-image: url("../../img/bunny-tablet.jpg");
-    width: 334px;
-    height: 334px;
-  }
-  /*
-  @media (min-width: @desktop-width) {
-  }
-  */
-}
-
-.product:nth-of-type(2) .product__image {
-  background-image: url("../../img/laundry-basket-mobile.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 260px;
-  height: 195px;
-
-  @media (min-width: @tablet-width) {
-    background-image: url("../../img/laundry-basket-tablet.jpg");
-    width: 334px;
-    height: 334px;
-  }
-  /*
-  @media (min-width: @desktop-width) {
-  }
-  */
-}
-
-.product:nth-of-type(3) .product__image {
-  background-image: url("../../img/toy-laundry-mobile.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 260px;
-  height: 195px;
-
-  @media (min-width: @tablet-width) {
-    background-image: url("../../img/toy-laundry-tablet.jpg");
-    width: 334px;
-    height: 334px;
-  }
-  /*
-  @media (min-width: @desktop-width) {
-  }
-  */
-}
-
 .product__wrapper {
-  padding: 28px 28px 0 28px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: auto;
 
   @media (min-width: @tablet-width) {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr;
   }
@@ -87,16 +35,19 @@
   font-size: 17px;
   line-height: 24px;
 
-  @media (min-width: @mobile-width-only) {
-    margin-bottom: 6px;
-  }
-  /*
-  @media (min-width: @tablet-width) {
+  & a {
+    text-decoration: none;
+    color: @font-regular;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 6px;
   }
-  */
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .product__description {
@@ -104,31 +55,18 @@
   font-size: 13px;
   line-height: 30px;
   margin: 0;
+  color: @darken-blue-black;
 
-  @media (min-width: @mobile-width-only) {
-    margin-bottom: 17px;
-  }
-  /*
   @media (min-width: @tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
   }
-
-  @media (min-width: @desktop-width) {
-  }
-  */
 }
 
 .product__description-list {
-  @media (min-width: @mobile-width-only) {
-    margin: 0;
-    border-bottom: 1px solid @thin-grey-line;
-  }
-  /*
-  @media (min-width: @tablet-width) {
-  }
-
-  @media (min-width: @desktop-width) {
-  }
-  */
+  padding: 0 0 18px 0;
+  margin: 0;
+  border-bottom: 1px solid @thin-grey-line;
 }
 
 .product__list {
@@ -137,20 +75,9 @@
   line-height: 24px;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-
-  @media (min-width: @mobile-width-only) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
-  /*
-  @media (min-width: @tablet-width) {
-  }
-
-  @media (min-width: @desktop-width) {
-  }
-  */
+  padding: 28px 0 0 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .product__price,
@@ -163,14 +90,27 @@
 
 .product__price {
   align-self: center;
+  padding: 0;
+
+  @media (max-width: @mobile-width-only) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 24px;
+  }
 }
 
 .product__buy {
   justify-self: end;
+  align-self: center;
 }
 
 .product__buy-button {
   border: none;
   background: transparent;
-  padding: 22px 0 22px 22px;
+  padding: 0;
+  cursor: pointer;
 }

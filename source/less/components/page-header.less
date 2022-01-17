@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: @base-bg-color;
   color: @font-regular;
 
   @media (max-width: @mobile-width-only) {
@@ -16,19 +15,24 @@
   }
 }
 
-.page-header__logo {
+.page-header--general {
+  background: linear-gradient(to bottom, @base-bg-color 0 87px, @thin-grey-line 87px 88px, @gen-nav-color 88px);
+}
+
+.page-header--inner {
+  background: linear-gradient(to bottom, @base-bg-color 0 87px, @thin-grey-line 87px 88px, @base-grey-color 88px);
+}
+
+.page-header__link {
+  background-color: @base-bg-color;
+
   @media (max-width: @mobile-width-only) {
-    background-image: url("../../img/logotype-mobile.svg");
-    background-repeat: no-repeat;
-    width: 86px;
-    height: 35px;
+    display: flex;
+    justify-content: center;
     margin: 22px auto;
   }
 
   @media (min-width: @tablet-width) {
-    background-image: url("../../img/logotype-tablet.svg");
-    width: 113px;
-    height: 46px;
     margin-left: 0;
     margin-right: auto;
     position: absolute;
@@ -36,11 +40,47 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../../img/logotype-desktop.svg");
-    width: 149px;
-    height: 72px;
     margin: 0 auto;
     left: 43%;
     top: 10px;
   }
 }
+
+.page-header__logo--visible-phone {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo--visible-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__logo--visible-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+/* НЕ РАБОТАЕТ
+.page-header__logo:hover {
+  opacity: 0.6;
+}
+*/
+
+/* МЕНЯЕТ ЦВЕТ (по приколу, знаю, это не понадобится)
+.page-header__logo path {
+  fill: red;
+  opacity: 0.6;
+}
+*/

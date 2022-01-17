@@ -2,9 +2,22 @@
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   color: @font-regular;
+  margin-bottom: 55px;
+}
+
+.order-form__wrapper {
   padding-left: 30px;
   padding-right: 30px;
-  margin-bottom: 55px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(6, 175px);
+  }
 }
 
 .order-form__text {
@@ -13,15 +26,25 @@
   line-height: 24px;
   margin-bottom: 37px;
   color: @darken-blue-black;
+  padding: 0;
 
-  @media (min-width: @mobile-width-only) {
-    padding: 0 7px;
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 6;
   }
-  /*
-  @media (min-width: @tablet-width) {
+}
+
+.order-form__break-tablet {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.order-form__break-desktop {
+  @media (max-width: @tablet-width) {
+    display: none;
   }
 
   @media (min-width: @desktop-width) {
+    display: inline;
   }
-  */
 }
