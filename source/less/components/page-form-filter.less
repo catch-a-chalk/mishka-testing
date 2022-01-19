@@ -25,10 +25,6 @@
 
   @media (min-width: @tablet-width) {
     border-top: none;
-
-    &:not(:last-of-type) {
-      margin-bottom: 66px;
-    }
   }
 }
 
@@ -40,6 +36,7 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(4, 167px);
     grid-template-rows: 1fr;
+    margin-bottom: 66px;
   }
 
   @media (min-width: @desktop-width) {
@@ -57,10 +54,47 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    top: 23px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     padding: 0;
+  }
+}
+
+.page-form-filter__title--type {
+  @media (min-width: @tablet-width) {
+    top: 22px;
+  }
+}
+
+.page-form-filter__title--color {
+  @media (min-width: @tablet-width) {
+    top: 85px;
+  }
+}
+
+.page-form-filter__title--full-name {
+  @media (min-width: @tablet-width) {
+    top: 56px;
+  }
+}
+
+.page-form-filter__title--phone {
+  @media (min-width: @tablet-width) {
+    top: 33px;
+  }
+}
+
+.page-form-filter__title--email {
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    top: 34px;
+  }
+}
+
+.page-form-filter__title--addition {
+  @media (min-width: @tablet-width) {
+    top: 50px;
   }
 }
 
@@ -85,7 +119,6 @@
   }
 }
 
-
 .page-form-filter__list--types {
   grid-row-gap: 24px;
 
@@ -109,6 +142,8 @@
     background-color: @base-grey-color;
     grid-template-columns: repeat(4, 167px);
     grid-template-rows: 1fr;
+    padding: 65px 0 69px 0;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -143,6 +178,7 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(4, 167px);
     grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -167,6 +203,10 @@
     grid-row: 1 / 2;
     display: flex;
     flex-direction: row;
+
+    & label {
+      align-self: center;
+    }
   }
 }
 
@@ -176,6 +216,10 @@
     grid-row: 2 / 3;
     display: flex;
     flex-direction: row;
+
+    & label {
+      align-self: center;
+    }
   }
 }
 
@@ -185,6 +229,19 @@
     grid-row: 3 / 4;
     display: flex;
     flex-direction: row;
+
+    & label {
+      align-self: center;
+    }
+  }
+}
+
+.page-form-filter__group--contacts {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+    grid-row-gap: 24px;
+    background-color: @base-grey-color;
+    padding: 50px 0;
   }
 }
 
@@ -193,9 +250,7 @@
 
   @media (min-width: @tablet-width) {
     background-color: @base-grey-color;
-    display: grid;
     grid-template-columns: repeat(4, 167px);
-    grid-template-rows: 1fr;
   }
 
   @media (min-width: @desktop-width) {
@@ -209,7 +264,6 @@
   @media (min-width: @tablet-width) {
     background-color: @base-grey-color;
     grid-template-columns: repeat(4, 167px);
-    grid-template-rows: 1fr;
   }
 
   @media (min-width: @desktop-width) {
@@ -282,7 +336,8 @@
     grid-column: -1 / -3;
     grid-row: 2 / 3;
     justify-self: end;
-    align-self: center;
+    position: relative;
+    top: 47px;
   }
 }
 
@@ -305,11 +360,19 @@
 }
 
 .page-form-filter__control-input[type="radio"]:checked:hover + .page-form-filter__control-mark::before {
-  content: url("../img/icon-radio-on.svg");
+  content: url("../img/icon-radio-on-hover.svg");
 }
 
 .page-form-filter__control-input[type="radio"]:not(:checked):hover + .page-form-filter__control-mark::before {
-  content: url("../img/icon-radio-off.svg");
+  content: url("../img/icon-radio-off-hover.svg");
+}
+
+.page-form-filter__control-input[type="radio"]:checked:active + .page-form-filter__control-mark::before {
+  content: url("../img/icon-radio-on-down.svg");
+}
+
+.page-form-filter__control-input[type="radio"]:not(:checked):active + .page-form-filter__control-mark::before {
+  content: url("../img/icon-radio-off-down.svg");
 }
 
 /*CHECKBOX-BUTTONS*/
@@ -322,11 +385,19 @@
 }
 
 .page-form-filter__control-input[type="checkbox"]:checked:hover + .page-form-filter__control-mark::before {
-  content: url("../img/icon-check-on.svg");
+  content: url("../img/icon-check-on-hover.svg");
 }
 
 .page-form-filter__control-input[type="checkbox"]:not(:checked):hover + .page-form-filter__control-mark::before {
-  content: url("../img/icon-check-off.svg");
+  content: url("../img/icon-check-off-hover.svg");
+}
+
+.page-form-filter__control-input[type="checkbox"]:checked:active + .page-form-filter__control-mark::before {
+  content: url("../img/icon-check-on-down.svg");
+}
+
+.page-form-filter__control-input[type="checkbox"]:not(:checked):active + .page-form-filter__control-mark::before {
+  content: url("../img/icon-check-off-down.svg");
 }
 
 .page-form-filter__text-input {

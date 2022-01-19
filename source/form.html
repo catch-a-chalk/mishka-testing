@@ -106,7 +106,7 @@
           <!-- Стоит ли оборачивать лейблы в тэг span? -->
           <form class="page-form-filter" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="page-form-filter__group page-form-filter__group--type">
-              <legend class="page-form-filter__title">ТИП</legend>
+              <legend class="page-form-filter__title page-form-filter__title--type">ТИП</legend>
               <ul class="page-form-filter__list page-form-filter__list--types">
                 <li class="page-form-filter__item">
                   <label class="page-form-filter__control">
@@ -126,7 +126,7 @@
             </fieldset>
 
             <fieldset class="page-form-filter__group page-form-filter__group--color">
-              <legend class="page-form-filter__title">ЦВЕТ</legend>
+              <legend class="page-form-filter__title page-form-filter__title--color">ЦВЕТ</legend>
               <ul class="page-form-filter__list page-form-filter__list--color">
                 <li class="page-form-filter__item">
                   <label class="page-form-filter__control">
@@ -174,7 +174,7 @@
             </fieldset>
 
             <fieldset class="page-form-filter__group page-form-filter__group--name">
-              <legend class="page-form-filter__title">ФИО</legend>
+              <legend class="page-form-filter__title page-form-filter__title--full-name">ФИО</legend>
               <p class="page-form-filter__user page-form-filter__user--first-name">
                 <label for="first-name">Имя:</label>
                 <input class="page-form-filter__text-input page-form-filter__text-input--name" type="text" id="first-name" name="first-name"
@@ -192,30 +192,32 @@
               </p>
             </fieldset>
 
-            <fieldset class="page-form-filter__group page-form-filter__group--phone">
-              <legend class="page-form-filter__title">ТЕЛ</legend>
-              <p class="page-form-filter__phone">
-                <label for="phone"><span class="visually-hidden">Телефон</span></label>
-                <!-- Вставить иконку svg-шкой? -->
-                <input class="page-form-filter__text-input page-form-filter__text-input--phone"
-                type="text" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-                <span class="page-form__icon page-form__icon--phone"></span>
-              </p>
-            </fieldset>
+            <div class="page-form-filter__group page-form-filter__group--contacts">
+              <fieldset class="page-form-filter__group page-form-filter__group--phone">
+                <legend class="page-form-filter__title page-form-filter__title--phone">ТЕЛ</legend>
+                <p class="page-form-filter__phone">
+                  <label for="phone"><span class="visually-hidden">Телефон</span></label>
+                  <!-- Вставить иконку svg-шкой? -->
+                  <input class="page-form-filter__text-input page-form-filter__text-input--phone"
+                  type="text" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                  <span class="page-form__icon page-form__icon--phone"></span>
+                </p>
+              </fieldset>
 
-            <fieldset class="page-form-filter__group page-form-filter__group--email">
-              <legend class="page-form-filter__title">E-MAIL</legend>
-              <p class="page-form-filter__email">
-                <label for="email"><span class="visually-hidden">Почта</span></label>
-                <!-- Вставить иконку svg-шкой? -->
-                <input class="page-form-filter__text-input page-form-filter__text-input--email"
-                type="text" id="email" name="email" placeholder="Ваш Email*" required>
-                <span class="page-form__icon page-form__icon--email"></span>
-              </p>
-            </fieldset>
+              <fieldset class="page-form-filter__group page-form-filter__group--email">
+                <legend class="page-form-filter__title page-form-filter__title--email">E-MAIL</legend>
+                <p class="page-form-filter__email">
+                  <label for="email"><span class="visually-hidden">Почта</span></label>
+                  <!-- Вставить иконку svg-шкой? -->
+                  <input class="page-form-filter__text-input page-form-filter__text-input--email"
+                  type="text" id="email" name="email" placeholder="Ваш Email*" required>
+                  <span class="page-form__icon page-form__icon--email"></span>
+                </p>
+              </fieldset>
+            </div>
 
             <fieldset class="page-form-filter__group page-form-filter__group--addition">
-              <legend class="page-form-filter__title">ДОП</legend>
+              <legend class="page-form-filter__title page-form-filter__title--addition">ДОП</legend>
               <p class="page-form-filter__addition">
                 <label class="visually-hidden" for="text">В свободной форме</label>
                 <textarea class="page-form-filter__wide" id="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
