@@ -2,10 +2,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
-  @media (min-width: @desktop-width) {
-    grid-column: 1 / -1;
-  }
 }
 
 .page-form-filter__group {
@@ -25,6 +21,7 @@
 
   @media (min-width: @tablet-width) {
     border-top: none;
+    justify-content: center;
   }
 }
 
@@ -37,6 +34,7 @@
     grid-template-columns: repeat(4, 167px);
     grid-template-rows: 1fr;
     margin-bottom: 66px;
+    padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -142,7 +140,7 @@
     background-color: @base-grey-color;
     grid-template-columns: repeat(4, 167px);
     grid-template-rows: 1fr;
-    padding: 65px 0 69px 0;
+    padding: 65px 50px 69px 50px;
     margin-bottom: 30px;
   }
 
@@ -179,6 +177,7 @@
     grid-template-columns: repeat(4, 167px);
     grid-template-rows: 1fr 1fr 1fr;
     margin-bottom: 50px;
+    padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -237,11 +236,14 @@
 }
 
 .page-form-filter__group--contacts {
+  border: none;
+  margin-bottom: 30px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 50px;
     grid-row-gap: 24px;
     background-color: @base-grey-color;
-    padding: 50px 0;
+    padding: 50px;
   }
 }
 
@@ -277,6 +279,7 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(4, 167px);
     grid-template-rows: auto;
+    padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -322,6 +325,10 @@
   @media (min-width: @tablet-width) {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 4;
   }
 }
 
@@ -460,6 +467,7 @@
 }
 
 .page-form-filter__wide {
+  margin-top: 10px;
   box-sizing: border-box;
   border: 1px solid @font-regular;
   width: 100%;
