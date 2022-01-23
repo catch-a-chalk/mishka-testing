@@ -12,6 +12,28 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+
+    &:hover {
+      .product__wrapper {
+        box-shadow: 0 6px 10px 0 @thin-grey-line;
+      }
+    }
+
+    &:hover:active {
+      .product__wrapper {
+        box-shadow: 0 3px 5px 0 @thin-grey-line;
+      }
+    }
+  }
+}
+
+.product__image {
+  @media (min-width: @tablet-width) {
+    height: 334px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 462px;
   }
 }
 
@@ -38,6 +60,14 @@
   & a {
     text-decoration: none;
     color: @font-regular;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:hover:active {
+      opacity: 0.3;
+    }
   }
 
   @media (max-width: @mobile-width-only) {
@@ -113,4 +143,18 @@
   background: transparent;
   padding: 0;
   cursor: pointer;
+
+  &:hover {
+    svg path {
+      fill: @tiffany-lighter;
+      opacity: 1;
+    }
+  }
+
+  &:hover:active {
+    svg path {
+      fill: @tiffany-lighter;
+      opacity: 0.3;
+    }
+  }
 }

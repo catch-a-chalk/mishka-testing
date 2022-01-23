@@ -102,11 +102,11 @@
           </header>
           <ul class="main-header__list">
             <li class="main-header__item main-header--interior">
-              Предметы<br>интерьера
+              <span class="main-header__text main-header__text--interior">Предметы<br>интерьера</span>
               <div class="main-header--interior-image"></div>
             </li>
             <li class="main-header__item main-header--toys">
-              Детские<br>игрушки
+              <span class="main-header__text main-header__text--toys">Детские<br>игрушки</span>
               <div class="main-header--toys-image"></div>
             </li>
           </ul>
@@ -151,7 +151,6 @@
       <div class="zigzag-line"></div>
 
       <section class="about">
-        <div class="about__background"></div>
         <div class="about__wrapper">
           <h2 class="about__title about__title--first">Коротко о нас:</h2>
           <ul class="about-advantages">
@@ -174,42 +173,46 @@
               <h3 class="about-advantages__description">Поставляется<br>в подарочной упаковке</h3>
             </li>
           </ul>
-          <h2 class="about__title about__title--second">Отзывы</h2>
-          <div class="about-feedback about-feedback__slider">
-            <blockquote class="about-feedback__item slider__item">
-              <div class="about-feedback__author-info">
-                <p class="about-feedback__text">
-                  Я молодая мама, но всё равно
-                  фотографии не набирали и близко
-                  такого количества лайков, как
-                  у популярных инстамамочек.
-                  В отчаянии, я накупила
-                  аксессуаров и игрушек в Мишке,
-                  и мои фотографии сразу стали
-                  более стильными, а также
-                  набирают больше лайков!
-                </p>
-                <cite class="about-feedback__author-data">
-                  <span class="about-feedback__author-name">Анастасия Красильникова</span>
-                  <span class="about-feedback__author-link">@misssssiskras</span>
-                </cite>
-              </div>
-            </blockquote>
-          </div>
-          <!-- Задать книпки гридами? -->
-          <p class="about-feedback__toggle">
-            <button class="about-feedback__button about-feedback__button--left" type="button">
-              <span class="visually-hidden">Предыдущий комментарий</span>
-              <svg width="50" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 11H7.7l8.1-8.2L13 0 0 13l13 13 2.8-2.8L7.7 15H50v-4Z" fill="#000"/></svg>
-            </button>
-            <button class="about-feedback__button about-feedback__button--right" type="button">
-              <span class="visually-hidden">Следующий комментарий</span>
-              <svg width="50" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11h42.3l-8.1-8.2L37 0l13 13-13 13-2.8-2.8 8.1-8.2H0v-4Z" fill="#000"/></svg>
-            </button>
-          </p>
-          <a class="about-feedback__link button" href="#">НАПИСАТЬ</a>
         </div>
       </section>
+
+      <section class="review">
+        <div class="review__wrapper">
+          <h2 class="review__title">Отзывы</h2>
+            <div class="review-feedback review-feedback__slider">
+              <blockquote class="review-feedback__item slider__item">
+                <div class="review-feedback__author-info">
+                  <p class="review-feedback__text">
+                    Я молодая мама, но всё равно
+                    фотографии не набирали и близко
+                    такого количества лайков, как
+                    у популярных инстамамочек.
+                    В отчаянии, я накупила
+                    аксессуаров и игрушек в Мишке,
+                    и мои фотографии сразу стали
+                    более стильными, а также
+                    набирают больше лайков!
+                  </p>
+                  <cite class="review-feedback__author-data">
+                    <span class="review-feedback__author-name">Анастасия Красильникова</span>
+                    <span class="review-feedback__author-link">@misssssiskras</span>
+                  </cite>
+                </div>
+              </blockquote>
+            </div>
+            <p class="review-feedback__toggle">
+              <button class="review-feedback__button review-feedback__button--left" type="button">
+                <span class="visually-hidden">Предыдущий комментарий</span>
+                <svg width="50" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 11H7.7l8.1-8.2L13 0 0 13l13 13 2.8-2.8L7.7 15H50v-4Z" fill="#000"/></svg>
+              </button>
+              <button class="review-feedback__button review-feedback__button--right" type="button">
+                <span class="visually-hidden">Следующий комментарий</span>
+                <svg width="50" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11h42.3l-8.1-8.2L37 0l13 13-13 13-2.8-2.8 8.1-8.2H0v-4Z" fill="#000"/></svg>
+              </button>
+            </p>
+            <a class="review-feedback__link button" href="#">НАПИСАТЬ</a>
+          </div>
+        </section>
       <div class="zigzag-line"></div>
 
       <section class="contacts">
