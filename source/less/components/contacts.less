@@ -44,8 +44,6 @@
   font-size: 25px;
   line-height: 30px;
   margin: 0;
-  padding-left: 30px;
-  padding-right: 30px;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
@@ -130,10 +128,21 @@
 a[href^="info@mimimishkashop.ru"] {
   padding-bottom: 5px;
   border-bottom: 1px solid @tiffany-link;
+
+  &:hover {
+    color: @tiffany-link;
+  }
+
+  &:hover:active {
+    color: @tiffany-link;
+    border-bottom: none;
+  }
 }
 
 .contacts__map {
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
 
   @media (max-width: @mobile-width-only) {
     margin-bottom: 42px;

@@ -10,13 +10,7 @@
   padding-right: 30px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(6, 175px);
+    padding: 0;
   }
 }
 
@@ -26,11 +20,7 @@
   line-height: 24px;
   margin-bottom: 37px;
   color: @darken-blue-black;
-  padding: 0;
-
-  @media (min-width: @desktop-width) {
-    grid-column: 2 / 6;
-  }
+  padding: 0 50px;
 }
 
 .order-form__break-tablet {

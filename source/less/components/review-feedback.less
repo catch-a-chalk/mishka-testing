@@ -1,9 +1,8 @@
-.about-feedback {
+.review-feedback {
   @media (min-width: @tablet-width) {
     grid-column: 1 / 4;
-    grid-row: 5 / 6;
+    grid-row: 2 / 3;
     margin-top: 39px;
-    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -11,12 +10,11 @@
   }
 }
 
-.about-feedback__item {
-  position: relative;
+.review-feedback__item {
   margin: 0;
 }
 
-.about-feedback__text {
+.review-feedback__text {
   font-weight: 400;
   font-size: 15px;
   line-height: 30px;
@@ -32,20 +30,20 @@
   }
 }
 
-.about-feedback__author-data {
+.review-feedback__author-data {
   @media (max-width: @mobile-width-only) {
     margin-bottom: 30px;
   }
 }
 
-.about-feedback__author-name {
+.review-feedback__author-name {
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
 }
 
-.about-feedback__author-link {
+.review-feedback__author-link {
   display: block;
   font-style: normal;
   font-weight: 400;
@@ -54,26 +52,23 @@
   color: @darken-blue-black;
 }
 
-.about-feedback__toggle {
+.review-feedback__toggle {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  z-index: 3;
 
   @media (min-width: @tablet-width) {
     grid-column: 4 / 5;
-    grid-row: 5 / 6;
-    justify-content: end;
-    position: relative;
-    top: 70px;
+    grid-row: 2 / 3;
+    align-content: end;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 6 / 7;
-    justify-content: center;
-    top: 35px;
   }
 }
 
-.about-feedback__link {
+.review-feedback__link {
   text-decoration: none;
   text-align: center;
   font-weight: 700;
@@ -87,7 +82,7 @@
 
   @media (min-width: @tablet-width) {
     grid-column: 4 / 5;
-    grid-row: 4 / 5;
+    grid-row: 1 / 2;
     margin: 0;
     padding: 16px 16px;
   }
@@ -97,14 +92,23 @@
   }
 }
 
-.about-feedback__button {
+.review-feedback__button {
   border: 1px solid @thin-grey-line;
   background: transparent;
   padding-top: 13px;
   padding-bottom: 13px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:hover:active {
+    opacity: 0.3;
+  }
 }
 
-.about-feedback__button--left {
+.review-feedback__button--left {
   padding-left: 37px;
   padding-right: 42px;
 
@@ -115,7 +119,7 @@
   }
 }
 
-.about-feedback__button--right {
+.review-feedback__button--right {
   padding-left: 42px;
   padding-right: 37px;
 

@@ -1,5 +1,5 @@
 .main-header {
-  background-color: @base-bg-color;
+  background-color: @header-bg-color;
   background-repeat: no-repeat;
   background-position: top center;
 
@@ -139,8 +139,17 @@
   }
 }
 
+/* Не забываем о сдвиге вверх на 5px при наведении (учесть при PP)*/
+
 .main-header--interior {
   background-color: @tiffany-lighter;
+
+  @media (min-width: @tablet-width) {
+    &:hover {
+      box-shadow: 0 -15px 0 0 @tiffany-lighter;
+      padding-bottom: 39px;
+    }
+  }
 }
 
 .main-header--interior-image {
@@ -155,6 +164,13 @@
 
 .main-header--toys {
   background-color: @tiffany-darker;
+
+  @media (min-width: @tablet-width) {
+    &:hover {
+      box-shadow: 0 -15px 0 0 @tiffany-darker;
+      padding-bottom: 39px;
+    }
+  }
 }
 
 .main-header--toys-image {

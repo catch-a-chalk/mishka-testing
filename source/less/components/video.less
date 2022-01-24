@@ -24,6 +24,14 @@
     grid-template-rows: auto;
     grid-template-areas: "photo photo photo photo title title" "photo photo photo photo desc desc" "photo photo photo photo button button" "photo photo photo photo . .";
     padding-bottom: 0;
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 @thin-grey-line;
+    }
+
+    &:hover:active {
+      box-shadow: 0 3px 5px 0 @thin-grey-line;
+    }
   }
 }
 
@@ -147,6 +155,19 @@
 
   @media (min-width: @desktop-width) {
     grid-area: button;
+
+    &:hover {
+      svg {
+        transform: scale(1.2);
+      }
+    }
+
+    &:hover:active {
+      svg {
+        transform: scale(0.8);
+        opacity: 0.3;
+      }
+    }
   }
 }
 
