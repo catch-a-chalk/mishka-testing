@@ -1,0 +1,141 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 52, 64, 0.3);
+  z-index: 20;
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal-container__wrapper {
+  position: relative;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 28px 30px 46px;
+  background-color: @base-bg-color;
+  box-shadow: 0 5px 10px 0 @shadow;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 566px;
+    height: 336px;
+  }
+}
+
+.modal-container__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-container__title {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  align-self: center;
+  margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    width: 164px;
+  }
+  /*
+  @media (min-width: @tablet-width) {
+  }*/
+}
+
+.modal-container__form {
+  @media (max-width: @mobile-width-only) {
+    margin-top: 14px;
+  }
+  /*
+  @media (min-width: @tablet-width) {
+  }*/
+}
+
+.modal-container__group {
+  border: none;
+  text-align: center;
+  padding: 0;
+}
+
+.modal-container__text {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 30px;
+  color: @darken-blue-black;
+}
+
+.modal-container__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-container__item {
+  margin-top: 40px;
+}
+
+.modal-container__button {
+  position: relative;
+}
+
+.modal-container__control-mark {
+  box-sizing: border-box;
+  position: absolute;
+  width: 82px;
+  height: 52px;
+  top: -17px;
+}
+
+.modal-container__control-input[type="radio"]:checked + .modal-container__control-mark::before {
+  content: url("../img/modal-checked.svg");
+}
+
+.modal-container__control-input[type="radio"]:not(:checked) + .modal-container__control-mark::before {
+  content: url("../img/modal-unchecked.svg");
+}
+
+.modal-container__control-input[type="radio"]:checked:hover + .modal-container__control-mark::before {
+  content: url("../img/modal-hover.svg");
+}
+
+.modal-container__control-input[type="radio"]:not(:checked):hover + .modal-container__control-mark::before {
+  content: url("../img/modal-hover.svg");
+}
+
+.modal-container__control-label {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 16px;
+  color: @darken-blue-black;
+  padding: 18px 33px;
+}
+
+.modal-container__add-button {
+  padding: 18px 68px;
+  margin-top: 49px;
+  background-color: @tiffany-lighter;
+  color: @font-white;
+  border: none;
+  /*
+  @media (min-width: @tablet-width) {
+  }*/
+}

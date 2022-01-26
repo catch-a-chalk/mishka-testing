@@ -25,3 +25,23 @@
     line-height: 57px;
   }
 }
+
+.page-title--bottom {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -5px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/zigzag-wavy-tablet.svg");
+    height: 24px;
+    top: 173px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/zigzag-wavy-desktop.svg");
+    height: 34px;
+    bottom: 0;
+    top: 170px;
+  }
+}
