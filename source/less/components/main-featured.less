@@ -49,7 +49,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(6, 175px);
+    grid-template-columns: 175px 350px 525px;
     grid-template-rows: 33px 1fr 1fr 1fr 33px 1fr;
   }
 }
@@ -74,7 +74,7 @@
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
-    grid-column: 2 / 5;
+    grid-column: 2 / -1;
     grid-row: 2 / 3;
     z-index: 1;
   }
@@ -118,7 +118,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 2 / 4;
+    grid-column: 2 / 3;
     grid-row: 3 / 4;
   }
 }
@@ -138,7 +138,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 2 / 4;
+    grid-column: 2 / 3;
     grid-row: 4 / 5;
   }
 }
@@ -189,7 +189,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 2 / 4;
+    grid-column: 2 / 3;
     grid-row: 6 / 7;
   }
 }

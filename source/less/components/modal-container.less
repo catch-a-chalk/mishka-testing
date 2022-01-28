@@ -5,7 +5,7 @@
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: rgba(45, 52, 64, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 20;
 }
 
@@ -27,7 +27,8 @@
 
   @media (min-width: @tablet-width) {
     width: 566px;
-    height: 336px;
+    min-height: 336px;
+    padding: 37px 92px 46px;
   }
 }
 
@@ -49,24 +50,27 @@
   @media (max-width: @mobile-width-only) {
     width: 164px;
   }
-  /*
+
   @media (min-width: @tablet-width) {
-  }*/
+    margin-bottom: 21px;
+  }
 }
 
 .modal-container__form {
   @media (max-width: @mobile-width-only) {
     margin-top: 14px;
   }
-  /*
-  @media (min-width: @tablet-width) {
-  }*/
 }
 
 .modal-container__group {
   border: none;
   text-align: center;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+    margin: 0 auto;
+  }
 }
 
 .modal-container__text {
@@ -76,6 +80,7 @@
   font-size: 15px;
   line-height: 30px;
   color: @darken-blue-black;
+  margin-bottom: 22px;
 }
 
 .modal-container__list {
@@ -85,56 +90,46 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-.modal-container__item {
-  margin-top: 40px;
+  margin-bottom: 31px;
 }
 
 .modal-container__button {
-  position: relative;
-}
-
-.modal-container__control-mark {
-  box-sizing: border-box;
-  position: absolute;
+  background: transparent;
+  border: 2px solid @thin-grey-line;
   width: 82px;
   height: 52px;
-  top: -17px;
+
+  &:hover {
+    border: 2px solid @shadow;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 1;
+    border: 2px solid @tiffany-lighter;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+  }
 }
 
-.modal-container__control-input[type="radio"]:checked + .modal-container__control-mark::before {
-  content: url("../img/modal-checked.svg");
-}
-
-.modal-container__control-input[type="radio"]:not(:checked) + .modal-container__control-mark::before {
-  content: url("../img/modal-unchecked.svg");
-}
-
-.modal-container__control-input[type="radio"]:checked:hover + .modal-container__control-mark::before {
-  content: url("../img/modal-hover.svg");
-}
-
-.modal-container__control-input[type="radio"]:not(:checked):hover + .modal-container__control-mark::before {
-  content: url("../img/modal-hover.svg");
-}
-
-.modal-container__control-label {
+.modal-container__value {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 17px;
   line-height: 16px;
+  text-align: center;
   color: @darken-blue-black;
-  padding: 18px 33px;
 }
 
 .modal-container__add-button {
   padding: 18px 68px;
-  margin-top: 49px;
   background-color: @tiffany-lighter;
   color: @font-white;
   border: none;
+  width: 100%;
   /*
   @media (min-width: @tablet-width) {
   }*/
