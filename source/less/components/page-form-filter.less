@@ -408,12 +408,25 @@
 }
 
 .page-form-filter__text-input {
+  outline: 0;
+  outline-offset: 0;
   border: none;
   border-bottom: 2px solid @font-regular;
   padding: 17px 10px 17px 0;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 18px;
 
   @media (max-width: @mobile-width-only) {
     width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:hover,
+    &:hover:active,
+    &:focus {
+      border-bottom: 2px solid @tiffany-link;
+    }
   }
 }
 
@@ -424,18 +437,12 @@
   }
 }
 
-.page-form-filter__text-input::placeholder {
+.page-form-filter__text-input::placeholder,
+.page-form-filter__wide::placeholder {
   font-weight: 400;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 18px;
   opacity: 0.3;
-}
-
-.page-form-filter__text-input--phone,
-.page-form-filter__text-input--email {
-  @media (min-width: @tablet-width) {
-    background-color: @base-grey-color;
-  }
 }
 
 .page-form-filter__phone,
@@ -447,6 +454,13 @@
     display: flex;
     flex-direction: column;
     grid-column: 2 / -1;
+  }
+}
+
+.page-form-filter__text-input--phone,
+.page-form-filter__text-input--email {
+  @media (min-width: @tablet-width) {
+    background-color: @base-grey-color;
   }
 }
 
@@ -466,11 +480,34 @@
   content: url("../img/icon-letter.svg");
 }
 
+.page-form-filter__text-input--phone:hover + .page-form__icon--phone::after,
+.page-form-filter__text-input--phone:active + .page-form__icon--phone::after,
+.page-form-filter__text-input--phone:focus + .page-form__icon--phone::after {
+  content: url("../img/icon-phone-hover.svg");
+}
+
+.page-form-filter__text-input--email:hover + .page-form__icon--email::after,
+.page-form-filter__text-input--email:active + .page-form__icon--email::after,
+.page-form-filter__text-input--email:focus + .page-form__icon--email::after {
+  content: url("../img/icon-letter-hover.svg");
+}
+
 .page-form-filter__wide {
+  outline: 0;
+  outline-offset: 0;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 18px;
   margin-top: 10px;
   box-sizing: border-box;
-  border: 1px solid @font-regular;
+  border: 2px solid @darken-blue-black;
   width: 100%;
   padding: 17px;
   min-height: 142px;
+
+  &:hover,
+  &:hover:active,
+  &:focus {
+    border: 2px solid @tiffany-link;
+  }
 }

@@ -33,11 +33,32 @@
   }
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/logotype-footer.svg");
-    background-repeat: no-repeat;
-    width: 102px;
-    height: 34px;
     position: static;
+  }
+}
+
+.page-footer__icon,
+.page-footer__logo {
+  &:hover {
+    fill: @social;
+  }
+
+  &:active {
+    fill: @social;
+    opacity: 0.3;
+  }
+}
+
+.page-footer__academy {
+  fill: @tiffany-lighter;
+
+  &:hover {
+    fill: @social;
+  }
+
+  &:active {
+    fill: @social;
+    opacity: 0.3;
   }
 }
 

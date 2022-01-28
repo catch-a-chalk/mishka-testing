@@ -20,6 +20,7 @@ img {
 }
 
 .button {
+  color: @darken-blue-black;
   padding: 16px 70px;
   border: 2px solid @darken-blue-black;
   background: transparent;
@@ -32,11 +33,16 @@ img {
   &:hover:active {
     background-color: @darken-blue-black;
     color: @font-white;
-    opacity: 0.3;
+
+    .button-text {
+      opacity: 0.3;
+    }
   }
 }
 
 .button--wide {
+  color: @darken-blue-black;
+  line-height: 16px;
   padding: 16px 45px;
   border: 2px solid @darken-blue-black;
   background: transparent;
@@ -49,8 +55,19 @@ img {
   &:hover:active {
     background-color: @darken-blue-black;
     color: @font-white;
-    opacity: 0.3;
+
+    .button-text {
+      opacity: 0.3;
+    }
   }
+}
+
+.button-text {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
 }
 
 .zigzag-line {
