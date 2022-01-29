@@ -8,6 +8,10 @@
       <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
       <link rel="apple-touch-icon" href="img/favicons/apple-icon.png"><!-- 180x180 -->
       <link rel="manifest" href="manifest.webmanifest">
+      <link rel="preload" href="css/style.min.css" as="style">
+      <link rel="preload" href="js/script.js" as="script">
+      <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+      <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
       <title>Мишка - вязаные милые штучки ручной работы</title>
     </head>
 
@@ -74,20 +78,6 @@
           </div>
         </nav>
       </header>
-      <script>var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });</script>
 
       <main class="page-catalog">
         <h1 class="visually-hidden">Мишка - с заботой о домашнем уюте</h1>
@@ -99,9 +89,9 @@
               <div class="product__image">
                 <a href="#">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/bunny-desktop@1x.webp, img/bunny-desktop@2x.webp 2x" width="316" height="462">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/bunny-tablet@1x.webp, img/bunny-tablet@2x.webp 2x" width="334" height="334">
-                    <img type="image/webp" src="img/bunny-mobile@1x.webp" srcset="img/bunny-mobile@2x.webp" width="260" height="195" alt="Вязаный зайчик-попрыгайчик">
+                    <source type="image/webp" style="width: 316px; height: 462px;" media="(min-width: 1200px)" srcset="img/bunny-desktop@1x.webp, img/bunny-desktop@2x.webp 2x">
+                    <source type="image/webp" style="width: 334px; height: 334px;" media="(min-width: 768px)" srcset="img/bunny-tablet@1x.webp, img/bunny-tablet@2x.webp 2x">
+                    <img src="img/bunny-mobile@1x.webp" srcset="img/bunny-mobile@2x.webp" width="260" height="195" alt="Вязаный зайчик-попрыгайчик">
                   </picture>
                 </a>
               </div>
@@ -131,9 +121,9 @@
               <div class="product__image">
                 <a href="#">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/laundry-basket-desktop@1x.webp, img/laundry-basket-desktop@2x.webp 2x" width="315" height="462">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/laundry-basket-tablet@1x.webp, img/laundry-basket-tablet@2x.webp 2x" width="334" height="334">
-                    <img type="image/webp" src="img/laundry-basket-mobile@1x.webp" srcset="img/laundry-basket-mobile@2x.webp" width="260" height="195" alt="Вязаная корзинка для белья">
+                    <source type="image/webp" style="width: 315px; height: 462px;" media="(min-width: 1200px)" srcset="img/laundry-basket-desktop@1x.webp, img/laundry-basket-desktop@2x.webp 2x">
+                    <source type="image/webp" style="width: 334px; height: 334px;" media="(min-width: 768px)" srcset="img/laundry-basket-tablet@1x.webp, img/laundry-basket-tablet@2x.webp 2x">
+                    <img src="img/laundry-basket-mobile@1x.webp" srcset="img/laundry-basket-mobile@2x.webp" width="260" height="195" alt="Вязаная корзинка для белья">
                   </picture>
                 </a>
               </div>
@@ -163,9 +153,9 @@
               <div class="product__image">
                 <a href="#">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/toy-laundry-desktop@1x.webp, img/toy-laundry-desktop@2x.webp 2x" width="316" height="462">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/toy-laundry-tablet@1x.webp, img/toy-laundry-tablet@2x.webp 2x" width="334" height="334">
-                    <img type="image/webp" src="img/toy-laundry-mobile@1x.webp" srcset="img/toy-laundry-mobile@2x.webp" width="260" height="195" alt="Большая вязаная корзина для игрушек">
+                    <source type="image/webp" style="width: 316px; height: 462px;" media="(min-width: 1200px)" srcset="img/toy-laundry-desktop@1x.webp, img/toy-laundry-desktop@2x.webp 2x">
+                    <source type="image/webp" style="width: 334px; height: 334px;" media="(min-width: 768px)" srcset="img/toy-laundry-tablet@1x.webp, img/toy-laundry-tablet@2x.webp 2x">
+                    <img src="img/toy-laundry-mobile@1x.webp" srcset="img/toy-laundry-mobile@2x.webp" width="260" height="195" alt="Большая вязаная корзина для игрушек">
                   </picture>
                 </a>
               </div>
@@ -262,5 +252,46 @@
         </div>
       </div>
     </footer>
+
+    <!-- Здесь при удалении класса modal-container-close открывается модальное окно -->
+    <div class="modal-container modal-container-close">
+      <div class="modal-container__wrapper">
+        <section class="modal-container__content">
+          <h2 class="modal-container__title">ДОБАВИТЬ В КОРЗИНУ</h2>
+          <form class="modal-container__form" action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset class="modal-container__group">
+              <legend class="modal-container__text">Выберите размер:</legend>
+              <ul class="modal-container__list">
+                <li class="modal-container__item">
+                  <label class="modal-container__label">
+                    <button class="modal-container__button" type="button" name="size" value="small">
+                      <span class="modal-container__value">S</span>
+                    </button>
+                  </label>
+                </li>
+                <li class="modal-container__item">
+                  <label class="modal-container__label">
+                    <button class="modal-container__button" type="button" name="size" value="middle">
+                      <span class="modal-container__value">M</span>
+                    </button>
+                  </label>
+                </li>
+                <li class="modal-container__item">
+                  <label class="modal-container__label">
+                    <button class="modal-container__button" type="button" name="size" value="large">
+                      <span class="modal-container__value">L</span>
+                    </button>
+                  </label>
+                </li>
+              </ul>
+              <button class="modal-container__add-button" type="submit">
+                <span class="button-text">ДОБАВИТЬ</span>
+              </button>
+            </fieldset>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

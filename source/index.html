@@ -8,6 +8,10 @@
       <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
       <link rel="apple-touch-icon" href="img/favicons/apple-icon.png"><!-- 180x180 -->
       <link rel="manifest" href="manifest.webmanifest">
+      <link rel="preload" href="css/style.min.css" as="style">
+      <link rel="preload" href="js/script.js" as="script">
+      <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+      <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
       <title>Мишка - вязаные милые штучки ручной работы</title>
     </head>
 
@@ -74,20 +78,6 @@
           </div>
         </nav>
       </header>
-      <script>var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });</script>
 
       <main class="page-main">
         <h1 class="visually-hidden">Мишка - с заботой о домашнем уюте</h1>
@@ -132,9 +122,9 @@
               </dl>
               <p class="main-featured__image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.webp, img/triple-set-desktop@2x.webp 2x" width="525" height="636">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp, img/triple-set-tablet@2x.webp 2x" width="334" height="404">
-                  <img type="image/webp" src="img/triple-set-mobile@1x.webp" srcset="img/triple-set-mobile@2x.webp" width="260" height="315" alt="Вязаные корзинки в разных цветах и размерах">
+                  <source type="image/webp" style="width: 525px; height: 636px;" media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.webp, img/triple-set-desktop@2x.webp 2x">
+                  <source type="image/webp" style="width: 334px; height: 404px;" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp, img/triple-set-tablet@2x.webp 2x">
+                  <img loading="lazy" src="img/triple-set-mobile@1x.webp" srcset="img/triple-set-mobile@2x.webp" width="260" height="315" alt="Вязаные корзинки в разных цветах и размерах">
                 </picture>
               </p>
               <div class="main-featured__wrapper-bottom">
@@ -230,9 +220,9 @@
             </dl>
             <div class="contacts__map">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop@1x.webp, img/map-desktop@2x.webp 2x" width="527" height="457">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp, img/map-tablet@2x.webp 2x" width="768" height="457">
-                <img type="image/webp" src="img/map-mobile@1x.webp" srcset="img/map-mobile@2x.webp" width="320" height="455" alt="Местонахождение магазина">
+                <source type="image/webp" style="width: 527px; height: 457px;" media="(min-width: 1200px)" srcset="img/map-desktop@1x.webp, img/map-desktop@2x.webp 2x">
+                <source type="image/webp" style="width: 768px; height: 457px;" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp, img/map-tablet@2x.webp 2x">
+                <img loading="lazy" src="img/map-mobile@1x.webp" srcset="img/map-mobile@2x.webp" width="320" height="455" alt="Местонахождение магазина">
               </picture>
             </div>
             <a class="contacts__link button" href="#">
@@ -331,5 +321,6 @@
           </section>
         </div>
       </div>
+      <script src="js/script.js"></script>
     </body>
   </html>
