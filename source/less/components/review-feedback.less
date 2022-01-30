@@ -23,10 +23,21 @@
 
   @media (max-width: @mobile-width-only) {
     margin-bottom: 33px;
+    word-spacing: 3px;
   }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 40px;
+  }
+}
+
+.review-feedback__text--break {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -41,6 +52,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  letter-spacing: 1px;
 }
 
 .review-feedback__author-link {
@@ -56,6 +68,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   z-index: 3;
+  margin-top: 30px;
 
   @media (min-width: @tablet-width) {
     grid-column: 4 / 5;
@@ -121,7 +134,7 @@
 }
 
 .review-feedback__button--right {
-  padding-left: 42px;
+  padding-left: 32px;
   padding-right: 37px;
 
   @media (min-width: @tablet-width) {

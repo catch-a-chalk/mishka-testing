@@ -6,6 +6,7 @@
   @media (max-width: @mobile-width-only) {
     background-image: url("../img/hero-mobile@1x.jpg");
     background-size: 320px auto;
+    background-position: 0 -18px;
     min-height: 506px;
 
     @media (min-resolution: 2dppx) {
@@ -16,7 +17,7 @@
   @media (min-width: @tablet-width) {
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: 768px auto;
-    min-height: 758px;
+    background-position: 0 -48px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
@@ -51,16 +52,18 @@
   position: absolute;
 
   @media (max-width: @mobile-width-only) {
-    top: 18%;
+    top: 73px;
     left: 10%;
     right: 10%;
+    letter-spacing: 1px;
   }
 
   @media (min-width: @tablet-width) {
     width: 70%;
-    top: 22%;
+    top: 12%;
     left: 15%;
     right: 15%;
+    letter-spacing: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -99,14 +102,18 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  position: relative;
+  bottom: 67px;
 
   @media (max-width: @mobile-width-only) {
     min-height: 506px;
-    margin: 0 auto 31px;
+    margin: 0 auto 15px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     flex-wrap: wrap;
+    position: relative;
+    bottom: 18px;
   }
 
   @media (min-width: @tablet-width) {
@@ -131,7 +138,7 @@
   margin: 0;
 
   @media (max-width: @mobile-width-only) {
-    padding: 24px 50px 27px 30px;
+    padding: 27px 50px 27px 30px;
   }
 
   @media (min-width: @tablet-width) {
