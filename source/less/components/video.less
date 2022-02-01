@@ -19,11 +19,16 @@
   grid-template-rows: auto;
   border: 1px solid @thin-grey-line;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(6, 175px);
     grid-template-rows: auto;
     grid-template-areas: "photo photo photo photo title title" "photo photo photo photo desc desc" "photo photo photo photo button button" "photo photo photo photo . .";
     padding-bottom: 0;
+    margin-bottom: 110px;
 
     &:hover {
       box-shadow: 0 6px 10px 0 @thin-grey-line;
@@ -49,12 +54,13 @@
     order: 2;
     font-size: 20px;
     line-height: 24px;
+    margin-top: 20px;
   }
 
   @media (min-width: @desktop-width) {
     width: 180px;
     margin-top: 30px;
-    padding-left: 40px;
+    padding-left: 60px;
     grid-area: title;
     flex-direction: column;
     align-self: flex-end;
@@ -135,7 +141,7 @@
     grid-area: desc;
     width: 240px;
     padding-bottom: 0;
-    padding-left: 40px;
+    padding-left: 60px;
     margin: 0;
   }
 }
@@ -182,7 +188,7 @@
   text-align: center;
   color: @darken-blue-black;
   padding: 13px 16px;
-  margin: 0 34px 33px;
+  margin: 0 34px 50px;
 
   @media (min-width: @tablet-width) {
     order: 4;
@@ -190,8 +196,8 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 5 / 7;
-    margin-left: 40px;
+    margin-left: 60px;
     margin-right: 57px;
-    margin-top: 51px;
+    margin-top: 60px;
   }
 }

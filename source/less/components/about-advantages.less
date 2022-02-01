@@ -17,10 +17,12 @@
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 36px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 2 / -1;
+    grid-column-gap: 30px;
   }
 }
 
@@ -91,6 +93,11 @@
   font-size: 17px;
   line-height: 20px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .about-advantages__item--eco {

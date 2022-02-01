@@ -1,5 +1,5 @@
 .main-header {
-  background-color: @header-bg-color;
+  /*background-color: @header-bg-color;*/
   background-repeat: no-repeat;
   background-position: top center;
 
@@ -17,7 +17,7 @@
   @media (min-width: @tablet-width) {
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: 768px auto;
-    background-position: 0 -48px;
+    background-position: 0 -65px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
@@ -27,7 +27,8 @@
   @media (min-width: @desktop-width) {
     background-image: url("../img/hero-desktop@1x.jpg");
     background-size: 1150px auto;
-    min-height: 763px;
+    background-position: -5px -44px;
+    margin-bottom: 27px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
@@ -60,13 +61,14 @@
 
   @media (min-width: @tablet-width) {
     width: 70%;
-    top: 12%;
+    top: 13%;
     left: 15%;
     right: 15%;
     letter-spacing: 2px;
   }
 
   @media (min-width: @desktop-width) {
+    top: 16%;
     width: 67%;
   }
 }
@@ -117,11 +119,16 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 746px;
+    min-height: 726px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: end;
+    bottom: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 30px;
   }
 }
 
@@ -138,11 +145,15 @@
   margin: 0;
 
   @media (max-width: @mobile-width-only) {
-    padding: 27px 50px 27px 30px;
+    padding: 27px;
   }
 
   @media (min-width: @tablet-width) {
-    padding: 34px 50px 34px 36px;
+    padding: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 33px;
   }
 }
 
@@ -194,16 +205,17 @@
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: -5px;
+  bottom: 52px;
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/zigzag-wavy-tablet.svg");
     height: 24px;
+    bottom: 33px;
   }
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/zigzag-wavy-desktop.svg");
     height: 34px;
-    bottom: 0;
+    bottom: 11px;
   }
 }

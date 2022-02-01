@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    margin-bottom: 54px;
+    margin-bottom: 51px;
   }
 
   @media (min-width: @desktop-width) {
@@ -108,6 +108,10 @@
   padding: 19px 0 0 0;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    align-self: end;
+  }
 }
 
 .product__price,

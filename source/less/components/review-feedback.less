@@ -1,6 +1,6 @@
 .review-feedback {
   @media (min-width: @tablet-width) {
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     grid-row: 2 / 3;
     margin-top: 39px;
   }
@@ -27,17 +27,48 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 65px;
+    font-size: 17px;
+    line-height: 30px;
+    word-spacing: 5px;
   }
 }
 
-.review-feedback__text--break {
+.review-feedback__text--br_mobile {
   @media (max-width: @mobile-width-only) {
     display: block;
   }
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.review-feedback__text--br_tablet {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.review-feedback__text--br_desktop {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -98,7 +129,7 @@
     grid-column: 4 / 5;
     grid-row: 1 / 2;
     margin: 0;
-    padding: 16px 16px;
+    padding: 14px;
   }
 
   @media (min-width: @desktop-width) {
@@ -128,7 +159,7 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
     border: none;
   }
 }

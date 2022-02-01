@@ -13,22 +13,40 @@
   @media (min-width: @tablet-width) {
     padding: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(6, 175px);
+  }
 }
 
 .order-form__text {
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  margin-top: 87px;
   margin-bottom: 26px;
   color: @darken-blue-black;
-  padding: 0;
-  padding-right: 15px;
+  padding: 0 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 55px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / -1;
+    margin-top: 0;
+  }
 }
 
 .order-form__break-tablet {
   @media (min-width: @desktop-width) {
     display: none;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    margin-top: 0;
   }
 }
 

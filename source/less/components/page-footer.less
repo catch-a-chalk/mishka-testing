@@ -13,7 +13,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 3fr 3fr;
     grid-template-rows: 1fr;
     padding: 51px 50px 58px;
   }
@@ -81,8 +81,13 @@
   align-items: center;
   justify-items: center;
 
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin: 0 50px;
+    padding-left: 40px;
+    margin: 0 90px;
   }
 }
 
@@ -103,6 +108,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0 30px;
+  }
 
   @media (min-width: @tablet-width) {
     justify-content: flex-end;
