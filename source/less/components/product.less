@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    margin-bottom: 54px;
+    margin-bottom: 51px;
   }
 
   @media (min-width: @desktop-width) {
@@ -38,7 +38,7 @@
 }
 
 .product__wrapper {
-  padding: 28px;
+  padding: 26px;
   display: grid;
   grid-template-columns: auto;
 
@@ -105,9 +105,13 @@
   line-height: 24px;
   list-style-type: none;
   margin: 0;
-  padding: 28px 0 0 0;
+  padding: 19px 0 0 0;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    align-self: end;
+  }
 }
 
 .product__price,

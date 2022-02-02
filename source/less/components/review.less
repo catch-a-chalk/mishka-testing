@@ -7,16 +7,21 @@
   margin-bottom: 45px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 60px;
+    margin-top: 80px;
     position: relative;
     background-image: url("../img/review-feedback@1x.jpg");
     background-repeat: no-repeat;
     background-size: 350px 457px;
-    background-position: 50px;
+    margin-bottom: 37px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/review-feedback@2x.jpg");
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 45px 4px;
+    margin-bottom: 65px;
   }
 }
 
@@ -33,7 +38,7 @@
     display: grid;
     grid-template-columns: repeat(4, 167px);
     grid-template-rows: auto;
-    padding: 70px 50px 47px;
+    padding: 77px 50px 80px;
   }
 
   @media (min-width: @desktop-width) {

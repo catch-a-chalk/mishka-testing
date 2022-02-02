@@ -11,6 +11,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 824px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,19 +24,18 @@
   @media (max-width: @mobile-width-only) {
     min-height: 818px;
     margin-top: 38px;
+    margin-bottom: 37px;
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 60px;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin-top: 70px;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 457px;
     display: grid;
-    grid-template-columns: 175px 350px 525px;
-    grid-template-rows: 95px 80px 228px 52px;
+    grid-template-columns: 220px 350px 525px;
+    grid-template-rows: 87px 92px 228px 52px;
   }
 }
 
@@ -44,14 +44,18 @@
   font-size: 25px;
   line-height: 30px;
   margin: 0;
+  padding: 0 30px;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
     position: relative;
+    padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
     grid-column: 2 /3;
     grid-row: 2 / 3;
     padding: 0;
@@ -64,8 +68,8 @@
     width: 47px;
     height: 81px;
     position: absolute;
-    right: 0;
-    top: -20px;
+    right: 57px;
+    top: -24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -79,17 +83,19 @@
   font-size: 14px;
   line-height: 30px;
   display: grid;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 0 30px;
 
   @media (max-width: @mobile-width-only) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    margin-top: 25px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    margin-top: 60px;
+    margin-top: 48px;
+    padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -105,7 +111,14 @@
 .contacts__item {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 2fr 5fr;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    grid-template-columns: 2fr 6fr;
+  }
 }
 
 .contacts__item:not(:last-child) {
@@ -143,14 +156,14 @@ a[href^="info@mimimishkashop.ru"] {
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
+  position: relative;
 
   @media (max-width: @mobile-width-only) {
-    margin-bottom: 42px;
+    margin-bottom: 37px;
   }
 
   @media (min-width: @tablet-width) {
-    position: relative;
-    margin-top: 60px;
+    margin-top: 48px;
     margin-bottom: 50px;
   }
 
@@ -158,6 +171,22 @@ a[href^="info@mimimishkashop.ru"] {
     grid-column: 3 / -1;
     grid-row: 1 / 5;
     margin: 0;
+  }
+}
+
+.contacts__map--pin {
+  position: absolute;
+  top: 146px;
+  left: 138px;
+
+  @media (min-width: @tablet-width) {
+    top: 139px;
+    left: 363px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 147px;
+    left: 238px;
   }
 }
 
@@ -169,15 +198,16 @@ a[href^="info@mimimishkashop.ru"] {
   line-height: 20px;
   color: @darken-blue-black;
   text-align: center;
-  padding: 16px 40px;
+  padding: 14px 40px;
   margin: 0 30px;
+  letter-spacing: 1px;
 
   @media (min-width: @tablet-width) {
-    padding: 16px 28px;
+    padding: 14px 38px;
     display: inline-block;
     position: relative;
-    left: 33%;
-    width: 160px;
+    left: 35%;
+    width: 149px;
     margin: 0 auto;
   }
 

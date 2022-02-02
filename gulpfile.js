@@ -12,6 +12,7 @@ import terser from 'gulp-terser';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
+import svgSprite from 'gulp-svg-sprite';
 
 // Styles
 
@@ -70,21 +71,34 @@ export const createWebp = () => {
 // SVG
 
 export const svg = () => {
-  return gulp.src(['!source/img/sprite/*.svg', 'source/img/**/*.svg'])
+  return gulp.src(['source/img/*.svg', '!source/img/sprite.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 }
 
+
 export const sprite = () => {
-  return gulp.src('source/img/sprite/*.svg')
-    .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+  return gulp.src('source/img/sprite/*.svg') // svg files for sprite
+      .pipe(svgSprite({
+              mode: {
+                  stack: {
+                      sprite: "../sprite.svg"  //sprite file name
+                  }
+              }
+          }
+      ))
+      .pipe(gulp.dest('build/img/'));
 }
 
+/* удалить
+export const sprite = () => {
+  return gulp.src('source/img/sprite/*.svg')
+  .pipe(svgSprite({
+    preview: false
+  }))
+  .pipe(gulp.dest('build/img'));
+}
+*/
 // Copy
 
 export const copy = (done) => {

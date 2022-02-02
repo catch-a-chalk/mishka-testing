@@ -89,8 +89,8 @@
               <div class="product__image">
                 <a href="#">
                   <picture>
-                    <source type="image/webp" style="width: 316px; height: 462px;" media="(min-width: 1200px)" srcset="img/bunny-desktop@1x.webp, img/bunny-desktop@2x.webp 2x">
-                    <source type="image/webp" style="width: 334px; height: 334px;" media="(min-width: 768px)" srcset="img/bunny-tablet@1x.webp, img/bunny-tablet@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/bunny-desktop@1x.webp, img/bunny-desktop@2x.webp 2x" width="316" height="462">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/bunny-tablet@1x.webp, img/bunny-tablet@2x.webp 2x" width="334" height="334">
                     <img src="img/bunny-mobile@1x.webp" srcset="img/bunny-mobile@2x.webp" width="260" height="195" alt="Вязаный зайчик-попрыгайчик">
                   </picture>
                 </a>
@@ -121,8 +121,8 @@
               <div class="product__image">
                 <a href="#">
                   <picture>
-                    <source type="image/webp" style="width: 315px; height: 462px;" media="(min-width: 1200px)" srcset="img/laundry-basket-desktop@1x.webp, img/laundry-basket-desktop@2x.webp 2x">
-                    <source type="image/webp" style="width: 334px; height: 334px;" media="(min-width: 768px)" srcset="img/laundry-basket-tablet@1x.webp, img/laundry-basket-tablet@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/laundry-basket-desktop@1x.webp, img/laundry-basket-desktop@2x.webp 2x" width="315" height="462">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/laundry-basket-tablet@1x.webp, img/laundry-basket-tablet@2x.webp 2x" width="334" height="334">
                     <img src="img/laundry-basket-mobile@1x.webp" srcset="img/laundry-basket-mobile@2x.webp" width="260" height="195" alt="Вязаная корзинка для белья">
                   </picture>
                 </a>
@@ -153,8 +153,8 @@
               <div class="product__image">
                 <a href="#">
                   <picture>
-                    <source type="image/webp" style="width: 316px; height: 462px;" media="(min-width: 1200px)" srcset="img/toy-laundry-desktop@1x.webp, img/toy-laundry-desktop@2x.webp 2x">
-                    <source type="image/webp" style="width: 334px; height: 334px;" media="(min-width: 768px)" srcset="img/toy-laundry-tablet@1x.webp, img/toy-laundry-tablet@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/toy-laundry-desktop@1x.webp, img/toy-laundry-desktop@2x.webp 2x" width="316" height="462">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/toy-laundry-tablet@1x.webp, img/toy-laundry-tablet@2x.webp 2x"  width="334" height="334">
                     <img src="img/toy-laundry-mobile@1x.webp" srcset="img/toy-laundry-mobile@2x.webp" width="260" height="195" alt="Большая вязаная корзина для игрушек">
                   </picture>
                 </a>
@@ -212,7 +212,7 @@
           </svg>
           <div class="page-footer__social">
             <ul class="page-footer__list">
-              <li class="page-footer__item">
+              <li class="page-footer__item page-footer__item--instagram">
                 <a class="page-footer__link page-footer__link--instagram" href="https://www.instagram.com/htmlacademy/">
                   <span class="visually-hidden">Мы в Инстаграме</span>
                   <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
@@ -221,37 +221,38 @@
                   </svg>
                 </a>
               </li>
-              <li class="page-footer__item"><a class="page-footer__link page-footer__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <span class="visually-hidden">Мы в Фейсбуке</span>
-                <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
-                <svg class="page-footer__icon" width="15" height="29">
-                  <use href="img/sprite.svg#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-footer__item">
-              <a class="page-footer__link page-footer__link--twitter" href="https://www.twitter.com/htmlacademy/">
-                <span class="visually-hidden">Мы в Твиттере</span>
-                <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
-                <svg class="page-footer__icon" width="24" height="20">
-                  <use href="img/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+              <li class="page-footer__item page-footer__item--facebook">
+                <a class="page-footer__link page-footer__link--facebook" href="https://www.facebook.com/htmlacademy">
+                  <span class="visually-hidden">Мы в Фейсбуке</span>
+                  <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+                  <svg class="page-footer__icon" width="15" height="29">
+                    <use href="img/sprite.svg#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__item page-footer__item--twitter">
+                <a class="page-footer__link page-footer__link--twitter" href="https://www.twitter.com/htmlacademy/">
+                  <span class="visually-hidden">Мы в Твиттере</span>
+                  <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+                  <svg class="page-footer__icon" width="24" height="20">
+                    <use href="img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__copyright">
+            <b class="page-footer__text">Разработано</b>
+            <a class="page-footer__link" href="https://htmlacademy.ru/">
+              <span class="visually-hidden">HTML Academy</span>
+              <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+              <svg class="page-footer__academy" width="27" height="35">
+                <use href="img/sprite.svg#logo-htmlacademy"></use>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="page-footer__copyright copyright">
-          <b class="page-footer__text">Разработано</b>
-          <a class="page-footer__link" href="https://htmlacademy.ru/">
-            <span class="visually-hidden">HTML Academy</span>
-            <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
-            <svg class="page-footer__academy" width="27" height="35">
-              <use href="img/sprite.svg#logo-htmlacademy"></use>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </footer>
+      </footer>
 
     <!-- Здесь при удалении класса modal-container-close открывается модальное окно -->
     <div class="modal-container modal-container-close">
