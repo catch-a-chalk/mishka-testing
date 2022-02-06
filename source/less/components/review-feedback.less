@@ -1,8 +1,12 @@
 .review-feedback {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 12px;
+  }
+
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-    margin-top: 39px;
+    margin-top: 41px;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,6 +18,12 @@
   margin: 0;
 }
 
+.review-feedback__author-info {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+  }
+}
+
 .review-feedback__text {
   font-weight: 400;
   font-size: 15px;
@@ -23,18 +33,24 @@
 
   @media (max-width: @mobile-width-only) {
     margin-bottom: 33px;
-    word-spacing: 3px;
+    word-spacing: 5px;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 62px;
     font-size: 17px;
     line-height: 30px;
-    word-spacing: 5px;
+    word-spacing: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 4px;
+    margin-bottom: 43px;
   }
 }
 
-.review-feedback__text--br_mobile {
+.review-feedback__span-mobile,
+.review-feedback__text--mobile {
   @media (max-width: @mobile-width-only) {
     display: block;
   }
@@ -44,7 +60,8 @@
   }
 }
 
-.review-feedback__text--br_tablet {
+.review-feedback__span-tablet,
+.review-feedback__text--tablet {
   @media (max-width: @mobile-width-only) {
     display: none;
   }
@@ -58,7 +75,8 @@
   }
 }
 
-.review-feedback__text--br_desktop {
+.review-feedback__span-desktop,
+.review-feedback__text--desktop {
   @media (max-width: @mobile-width-only) {
     display: none;
   }
@@ -84,6 +102,10 @@
   font-size: 17px;
   line-height: 24px;
   letter-spacing: 1px;
+
+  @media (min-width: @tablet-width) {
+    word-spacing: 5px;
+  }
 }
 
 .review-feedback__author-link {
@@ -93,13 +115,20 @@
   font-size: 17px;
   line-height: 30px;
   color: @darken-blue-black;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 4px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 5px;
+  }
 }
 
-.review-feedback__toggle {
+.review-feedback-toggle {
   display: grid;
   grid-template-columns: 1fr 1fr;
   z-index: 3;
-  margin-top: 30px;
 
   @media (min-width: @tablet-width) {
     grid-column: 4 / 5;
@@ -110,38 +139,75 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 6 / 7;
+    margin-bottom: 15px;
   }
 }
 
-.review-feedback__link {
+.review-feedback-link {
   text-decoration: none;
   text-align: center;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   color: @darken-blue-black;
+  padding: 15px 70px 13px;
+  border: 2px solid @darken-blue-black;
+  background: transparent;
 
   @media (max-width: @mobile-width-only) {
-    margin-top: 20px;
+    margin-top: 22px;
   }
 
   @media (min-width: @tablet-width) {
+    width: 175px;
+    box-sizing: border-box;
+    position: relative;
+    right: 8px;
     grid-column: 4 / 5;
     grid-row: 1 / 2;
     margin: 0;
-    padding: 14px;
+    padding: 13px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 6 / 7;
+    right: 0;
+    top: 6px;
+  }
+
+  &:hover {
+    background-color: @darken-blue-black;
+    color: @font-white;
+  }
+
+  &:hover:active {
+    background-color: @darken-blue-black;
+    color: @font-white;
+
+    .review-feedback-link__text {
+      opacity: 0.3;
+    }
   }
 }
 
-.review-feedback__button {
+.review-feedback-link__text {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    line-height: 24px;
+  }
+}
+
+.review-feedback-button {
+  color: @darken-blue-black;
   border: 1px solid @thin-grey-line;
   background: transparent;
   padding-top: 13px;
-  padding-bottom: 13px;
+  padding-bottom: 8px;
   cursor: pointer;
 
   &:hover {
@@ -153,22 +219,22 @@
   }
 }
 
-.review-feedback__button--left {
+.review-feedback-button--left {
   padding-left: 37px;
   padding-right: 42px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 10px;
-    padding-right: 20px;
+    padding: 18px 20px 15px 10px;
     border: none;
   }
 }
 
-.review-feedback__button--right {
+.review-feedback-button--right {
   padding-left: 32px;
   padding-right: 37px;
 
   @media (min-width: @tablet-width) {
+    padding: 15px 14px 13px 10px;
     padding-left: 10px;
     padding-right: 10px;
     border: none;

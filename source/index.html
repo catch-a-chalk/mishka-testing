@@ -34,7 +34,7 @@
         <!-- Можно добавить класс main-nav--closed -->
         <!-- Можно добавить класс main-nav--opened -->
         <!-- Можно добавить класс main-nav--nojs -->
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -51,7 +51,7 @@
               <li class="user-list__item">
                 <a class="user-list__link" href="search.html">
                   <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
-                  <svg class="user-list__icon" width="18" height="18" aria-label="Иконка поиска" focusable="false">
+                  <svg class="user-list__icon user-list__icon--search" width="18" height="18" aria-label="Иконка поиска" focusable="false">
                     <use href="img/sprite.svg#icon-search"></use>
                   </svg>
                 </a>
@@ -59,7 +59,7 @@
               <li class="user-list__item">
                 <a class="user-list__link" href="cart.html">
                   <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
-                  <svg class="user-list__icon" width="21" height="18" aria-label="Иконка корзины заказов" focusable="false">
+                  <svg class="user-list__icon user-list__icon--cart" width="21" height="18" aria-label="Иконка корзины заказов" focusable="false">
                     <use href="img/sprite.svg#icon-cart"></use>
                   </svg>
                   <span class="user-list__text">Корзина: пока пуста</span>
@@ -87,13 +87,13 @@
               <h2 class="main-header__title">Милые штуки <span class="main-header__span">ручной</span> работы для дома</h2>
             </header>
             <ul class="main-header__list">
-              <li class="main-header__item main-header--interior">
+              <li class="main-header__item main-header__item--interior">
                 <span class="main-header__text main-header__text--interior">Предметы<br>интерьера</span>
-                <div class="main-header--interior-image"></div>
+                <div class="main-header__interior-image"></div>
               </li>
-              <li class="main-header__item main-header--toys">
+              <li class="main-header__item main-header__item--toys">
                 <span class="main-header__text main-header__text--toys">Детские<br>игрушки</span>
-                <div class="main-header--toys-image"></div>
+                <div class="main-header__toys-image"></div>
               </li>
             </ul>
             <div class="main-header-bottom"></div>
@@ -122,19 +122,23 @@
               </dl>
               <p class="main-featured__image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.webp, img/triple-set-desktop@2x.webp 2x" width="525" height="636">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp, img/triple-set-tablet@2x.webp 2x" width="334" height="404">
-                  <img loading="lazy" src="img/triple-set-mobile@1x.webp" srcset="img/triple-set-mobile@2x.webp" width="260" height="315" alt="Вязаные корзинки в разных цветах и размерах">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp, img/triple-set-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp, img/triple-set-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/triple-set-mobile@2x.webp, img/triple-set-mobile@1x.webp 2x">
+
+                  <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg, img/triple-set-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg, img/triple-set-tablet@2x.jpg 2x">
+                  <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg" alt="Вязаные корзинки в разных цветах и размерах">
                 </picture>
               </p>
               <div class="main-featured__wrapper-bottom">
                 <p class="main-featured__price">Цена: 990 руб.</p>
-                <a class="main-featured__button button" href="#"><span class="button-text">ЗАКАЗАТЬ</span></a>
+                <a class="main-featured__button" href="#"><span class="button-text">ЗАКАЗАТЬ</span></a>
               </div>
             </header>
           </div>
         </section>
-        <div class="zigzag-line"></div>
+        <div class="page-main__zigzag-line"></div>
 
         <section class="about">
           <div class="about__wrapper">
@@ -165,16 +169,33 @@
         <section class="review">
           <div class="review__wrapper">
             <h2 class="review__title">Отзывы</h2>
-            <div class="review-feedback review-feedback__slider">
-              <blockquote class="review-feedback__item slider__item">
+            <div class="review-feedback">
+              <blockquote class="review-feedback__item">
                 <div class="review-feedback__author-info">
-                  <p class="review-feedback__text">Я молодая мама, но всё равно фотографии не набирали и близко такого<br class="review-feedback__text--br_tablet"> количества лайков, как
-                    <br class="review-feedback__text--br_mobile"> у популярных инстамамочек.
-                    <br class="review-feedback__text--br_mobile"> В отчаянии, я накупила<br class="review-feedback__text--br_tablet">
-                    <br class="review-feedback__text--br_mobile">аксессуаров и игрушек в Мишке,
-                    <br class="review-feedback__text--br_mobile">и мои<br class="review-feedback__text--br_desktop"> фотографии сразу стали
-                    <br class="review-feedback__text--br_mobile"> более<br class="review-feedback__text--br_tablet"> стильными, а также
-                    <br class="review-feedback__text--br_mobile">набирают больше лайков!</p>
+                  <p class="review-feedback__text">
+                    <span class="review-feedback__span-mobile">
+                      Я молодая мама, но всё равно<br class="review-feedback__text--mobile">
+                      фотографии не набирали и близко<br class="review-feedback__text--mobile">
+                      такого количества лайков, как<br class="review-feedback__text--mobile">
+                      у популярных инстамамочек.<br class="review-feedback__text--mobile">
+                      В отчаянии, я накупила<br class="review-feedback__text--mobile">
+                      аксессуаров и игрушек в Мишке,<br class="review-feedback__text--mobile">
+                      и мои фотографии сразу стали<br class="review-feedback__text--mobile">
+                      более стильными, а также<br class="review-feedback__text--mobile">
+                      набирают больше лайков!
+                    </span>
+                    <span class="review-feedback__span-tablet">
+                      Я молодая мама, но всё равно фотографии не набирали и близко такого<br class="review-feedback__text--tablet">
+                      количества лайков, как у популярных инстамамочек. В отчаянии, я накупила<br class="review-feedback__text--tablet">
+                      аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более<br class="review-feedback__text--tablet">
+                      стильными, а также набирают больше лайков!
+                    </span>
+                    <span class="review-feedback__span-desktop">
+                      Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как<br class="review-feedback__text--desktop">
+                      у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои<br class="review-feedback__text--desktop">
+                      фотографии сразу стали более стильными, а также набирают больше лайков!
+                    </span>
+                  </p>
                   <cite class="review-feedback__author-data">
                     <span class="review-feedback__author-name">Анастасия Красильникова</span>
                     <span class="review-feedback__author-link">@misssssiskras</span>
@@ -182,26 +203,26 @@
                 </div>
               </blockquote>
             </div>
-            <p class="review-feedback__toggle">
-              <button class="review-feedback__button review-feedback__button--left" type="button">
+            <p class="review-feedback-toggle">
+              <button class="review-feedback-button review-feedback-button--left" type="button">
                 <span class="visually-hidden">Предыдущий комментарий</span>
                 <svg width="50" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M50 11H7.7l8.1-8.2L13 0 0 13l13 13 2.8-2.8L7.7 15H50v-4Z" fill="#000"/>
                 </svg>
               </button>
-              <button class="review-feedback__button review-feedback__button--right" type="button">
+              <button class="review-feedback-button review-feedback-button--right" type="button">
                 <span class="visually-hidden">Следующий комментарий</span>
                 <svg width="50" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 11h42.3l-8.1-8.2L37 0l13 13-13 13-2.8-2.8 8.1-8.2H0v-4Z" fill="#000"/>
                 </svg>
               </button>
             </p>
-            <a class="review-feedback__link button" href="#">
-              <span class="button-text">НАПИСАТЬ</span>
+            <a class="review-feedback-link" href="#">
+              <span class="review-feedback-link__text">НАПИСАТЬ</span>
             </a>
           </div>
         </section>
-        <div class="zigzag-line"></div>
+        <div class="page-main__zigzag-line"></div>
 
         <section class="contacts">
           <div class="contacts__wrapper">
@@ -225,16 +246,20 @@
               </div>
             </dl>
             <div class="contacts__map">
-              <svg class="contacts__map--pin" width="67" height="100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M57.13 9.15c-13.1-12.2-34.21-12.2-47.3 0-13.1 12.2-13.1 31.95 0 44.15 0 0 23.64 21.63 23.64 46.63 0-25 23.66-46.63 23.66-46.63 13.1-12.1 13.1-31.95 0-44.15Z" fill="#fff"/><path d="M47.69 45.16c-.61-3.27.1-6.84 0-10.21-.1-3.77-.71-7.44-.71-11.12 0-2.97.5-6.15-.51-9.02.1-.3.1-.7.2-1 .3-1.48-4.67-.69-5.38.6-.5.4-.7.9-.5 1.29.1.1.1.2.1.4-.92 4.46-2.24 8.73-3.76 13.1-.61 1.68-1.22 3.27-1.83 4.85a67.03 67.03 0 0 1-2.33-4.66c-1.93-4.76-3.76-9.62-6.1-14.19.31-2.08-4.56-1.88-5.48 0-1.11 2.38-1.01 4.77-.6 7.25.4 2.87.5 5.65.5 8.53.1 5.55.51 11 .61 16.57-.5.59-.6 1.19-.1 1.88.2.3.5.5.81.8 1.32.99 4.98.2 4.98-1.8 0-5.75-.4-11.4-.61-17.15v-1.7c.1.2.2.4.2.6a41.3 41.3 0 0 0 3.15 6.45c1.22 2.09 1.83 4.27 2.54 6.45-.3.3-.41.6-.3 1-.11.29.1.39.4.49.91.8 2.64.4 3.55 0l1.22-.6c.5-.3 1.22-.99 1.01-1.58 0-.1-.1-.3-.1-.4.71-1.79 1.02-3.57 1.42-5.46a38.44 38.44 0 0 1 1.83-5.75c.1.9.1 1.69.2 2.58.3 3.57 0 7.04 0 10.61 0 1.2.1 2.29.3 3.38.11.5.52 2.48.41 2.58-.9.79-.6 1.78.51 1.98 1.32.3 2.95-.1 3.96-1 1.63-1.38.81-3.76.4-5.75Z" fill="#6BC6B3"/>
+              <svg class="contacts__pin" width="67" height="100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M57.13 9.15c-13.1-12.2-34.21-12.2-47.3 0-13.1 12.2-13.1 31.95 0 44.15 0 0 23.64 21.63 23.64 46.63 0-25 23.66-46.63 23.66-46.63 13.1-12.1 13.1-31.95 0-44.15Z" fill="#fff"/><path d="M47.69 45.16c-.61-3.27.1-6.84 0-10.21-.1-3.77-.71-7.44-.71-11.12 0-2.97.5-6.15-.51-9.02.1-.3.1-.7.2-1 .3-1.48-4.67-.69-5.38.6-.5.4-.7.9-.5 1.29.1.1.1.2.1.4-.92 4.46-2.24 8.73-3.76 13.1-.61 1.68-1.22 3.27-1.83 4.85a67.03 67.03 0 0 1-2.33-4.66c-1.93-4.76-3.76-9.62-6.1-14.19.31-2.08-4.56-1.88-5.48 0-1.11 2.38-1.01 4.77-.6 7.25.4 2.87.5 5.65.5 8.53.1 5.55.51 11 .61 16.57-.5.59-.6 1.19-.1 1.88.2.3.5.5.81.8 1.32.99 4.98.2 4.98-1.8 0-5.75-.4-11.4-.61-17.15v-1.7c.1.2.2.4.2.6a41.3 41.3 0 0 0 3.15 6.45c1.22 2.09 1.83 4.27 2.54 6.45-.3.3-.41.6-.3 1-.11.29.1.39.4.49.91.8 2.64.4 3.55 0l1.22-.6c.5-.3 1.22-.99 1.01-1.58 0-.1-.1-.3-.1-.4.71-1.79 1.02-3.57 1.42-5.46a38.44 38.44 0 0 1 1.83-5.75c.1.9.1 1.69.2 2.58.3 3.57 0 7.04 0 10.61 0 1.2.1 2.29.3 3.38.11.5.52 2.48.41 2.58-.9.79-.6 1.78.51 1.98 1.32.3 2.95-.1 3.96-1 1.63-1.38.81-3.76.4-5.75Z" fill="#6BC6B3"/>
               </svg>
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop@1x.webp, img/map-desktop@2x.webp 2x" width="527" height="457">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp, img/map-tablet@2x.webp 2x" width="768" height="457">
-                <img src="img/map-mobile@1x.webp" srcset="img/map-mobile@2x.webp" width="320" height="455" alt="Местонахождение магазина">
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp, img/map-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp, img/map-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/map-mobile@1x.webp, img/map-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg, img/map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg, img/map-tablet@2x.jpg 2x">
+                <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg" alt="Местонахождение магазина">
               </picture>
             </div>
-            <a class="contacts__link button" href="#">
-              <span class="button-text">НАПИШИТЕ НАМ</span>
+            <a class="contacts__link" href="#">
+              <span class="contacts__text">НАПИШИТЕ НАМ</span>
             </a>
           </div>
         </section>
@@ -322,7 +347,7 @@
                   </li>
                 </ul>
                 <button class="modal-container__add-button" type="submit">
-                  <span class="button-text">ДОБАВИТЬ</span>
+                  <span class="modal-container-text">ДОБАВИТЬ</span>
                 </button>
               </fieldset>
             </form>

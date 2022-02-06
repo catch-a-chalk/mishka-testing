@@ -3,12 +3,14 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     display: grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 83px 1fr;
     grid-template-rows: 1fr;
   }
 
   @media (min-width: @desktop-width) {
     top: -45px;
+    justify-content: end;
+    grid-template-columns: 90px 260px;
     grid-column: 3 / 4;
     grid-row: 1 / 2;
   }
@@ -17,14 +19,19 @@
 .user-list__item {
   @media (max-width: @mobile-width-only) {
     border-top: 1px solid @thin-grey-line;
-    padding: 28px 52px 27px 76px;
+    padding: 29px 52px 27px 76px;
     min-height: 20px;
+    letter-spacing: 1px;
   }
 
   @media (min-width: @tablet-width) {
     border-top: none;
     border-left: 1px solid @thin-grey-line;
     padding: 30px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: end;
   }
 }
 
@@ -71,16 +78,6 @@
     opacity: 0.3;
     fill: @tiffany-lighter;
   }
-
-  @media (min-width: @tablet-width) {
-    right: 28px;
-    top: 2px;
-  }
-
-  @media (min-width: @desktop-width) {
-    right: -27px;
-    top: 2px;
-  }
 }
 
 .user-list__item:first-child::after {
@@ -112,12 +109,31 @@
   fill: @white-icon;
 
   @media (max-width: @mobile-width-only) {
-    left: -41px;
-    top: -2px;
+    left: -45px;
+    top: 0;
   }
 
   @media (min-width: @tablet-width) {
     position: relative;
+  }
+}
+
+.user-list__icon--search {
+  @media (min-width: @tablet-width) {
+    top: 4px;
+    right: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 0;
+    left: 32px;
+  }
+}
+
+.user-list__icon--cart {
+  @media (min-width: @tablet-width) {
+    top: 3px;
+    right: 24px;
   }
 }
 
