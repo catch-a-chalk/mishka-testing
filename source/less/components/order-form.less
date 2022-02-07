@@ -14,13 +14,14 @@
   padding-left: 30px;
   padding-right: 30px;
 
-  @media (min-width: @tablet-width) {
-    padding: 0;
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    box-sizing: border-box;
+    margin: 0 auto;
   }
 
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(6, 175px);
+  @media (min-width: @tablet-width) {
+    padding: 0;
   }
 }
 
@@ -34,9 +35,11 @@
   word-spacing: 4px;
 
   @media (min-width: @tablet-width) {
+    width: 768px;
+    box-sizing: border-box;
+    margin: 0 auto 67px;
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 67px;
     padding: 0 50px;
   }
 

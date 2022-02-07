@@ -26,6 +26,9 @@
 
 .review__wrapper {
   @media (max-width: @mobile-width-only) {
+    width: 320px;
+    box-sizing: border-box;
+    margin: 0 auto;
     padding-left: 30px;
     padding-right: 30px;
     display: flex;
@@ -34,6 +37,9 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 768px;
+    box-sizing: border-box;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 167px);
     grid-template-rows: auto;
@@ -41,6 +47,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 1150px;
     grid-template-columns: repeat(6, 175px);
   }
 }
