@@ -1,0 +1,16 @@
+.page-main__zigzag-line {
+  background-image: url("../../img/zigzag-line-mobile.svg");
+  background-repeat: repeat;
+  width: 100%;
+  height: 6px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/zigzag-line-tablet.svg");
+    height: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/zigzag-line-desktop.svg");
+    height: 23px;
+  }
+}

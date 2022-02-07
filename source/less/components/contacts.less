@@ -5,26 +5,23 @@
   color: @font-regular;
 
   @media (max-width: @mobile-width-only) {
-    min-height: 818px;
-    margin-top: 38px;
+    width: 320px;
+    margin: 0 auto;
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 824px;
-    margin-bottom: 30px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 457px;
     margin-bottom: 105px;
   }
 }
 
 .contacts__wrapper {
   @media (max-width: @mobile-width-only) {
-    min-height: 818px;
     margin-top: 38px;
-    margin-bottom: 37px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: @tablet-width) {
@@ -34,7 +31,7 @@
   @media (min-width: @desktop-width) {
     min-height: 457px;
     display: grid;
-    grid-template-columns: 220px 350px 525px;
+    grid-template-columns: 226px 350px 524px;
     grid-template-rows: 87px 92px 228px 52px;
   }
 }
@@ -46,11 +43,16 @@
   margin: 0;
   padding: 0 30px;
 
+  @media (max-width: @mobile-width-only) {
+    letter-spacing: 2px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
     position: relative;
     padding: 0 50px;
+    letter-spacing: 3px;
   }
 
   @media (min-width: @desktop-width) {
@@ -68,13 +70,13 @@
     width: 47px;
     height: 81px;
     position: absolute;
-    right: 57px;
+    right: 53px;
     top: -24px;
   }
 
   @media (min-width: @desktop-width) {
-    left: -110px;
-    top: -20px;
+    left: -113px;
+    top: -24px;
   }
 }
 
@@ -88,8 +90,8 @@
   @media (max-width: @mobile-width-only) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    margin-top: 25px;
-    margin-bottom: 63px;
+    margin-top: 28px;
+    margin-bottom: 62px;
   }
 
   @media (min-width: @tablet-width) {
@@ -170,11 +172,11 @@ a[href^="info@mimimishkashop.ru"] {
   @media (min-width: @desktop-width) {
     grid-column: 3 / -1;
     grid-row: 1 / 5;
-    margin: 0;
+    margin: 5px 0 0 0;
   }
 }
 
-.contacts__map--pin {
+.contacts__pin {
   position: absolute;
   top: 146px;
   left: 138px;
@@ -193,28 +195,55 @@ a[href^="info@mimimishkashop.ru"] {
 .contacts__link {
   display: block;
   text-decoration: none;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   color: @darken-blue-black;
   text-align: center;
-  padding: 14px 40px;
+  padding: 14px 40px 13px;
   margin: 0 30px;
-  letter-spacing: 1px;
+  border: 2px solid @darken-blue-black;
+  background: transparent;
 
   @media (min-width: @tablet-width) {
-    padding: 14px;
-    display: inline-block;
-    position: relative;
-    left: 35%;
-    width: 230px;
+    display: table;
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
+    width: 150px;
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     margin: 0;
     position: static;
+  }
+
+  &:hover {
+    background-color: @darken-blue-black;
+    color: @font-white;
+  }
+
+  &:hover:active {
+    background-color: @darken-blue-black;
+    color: @font-white;
+
+    .contacts__text {
+      opacity: 0.3;
+    }
+  }
+}
+
+.contacts__text {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 1px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
   }
 }

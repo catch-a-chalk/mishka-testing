@@ -1,8 +1,7 @@
 .main-nav {
   @media (max-width: @mobile-width-only) {
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 79px;
   }
 }
 
@@ -27,7 +26,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -83px;
+  top: -78px;
   right: 2px;
   width: 80px;
   height: 80px;
@@ -44,16 +43,13 @@
 /* Здесь тоггл в открытом состоянии (позиционирование отличается от
 настроек .main-nav__toggle выше, поэтому top продублирован)*/
 .main-nav--opened .main-nav__toggle {
-  top: -79px;
-  right: 0;
-
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 40px;
-    left: 30px;
-    width: 30px;
+    top: 38px;
+    left: 28px;
+    width: 27px;
     height: 2px;
     background-color: @button-menu;
   }
@@ -69,7 +65,7 @@
 
   &:active::before,
   &:active::after {
-    background-color: fade(#ffffff, 30%);
+    background-color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -81,12 +77,12 @@
   width: 20px;
   height: 2px;
   background-color: @button-menu;
-  box-shadow: 0 8px 0 0 @button-menu, 0 16px 0 0 @button-menu;
+  box-shadow: 0 6px 0 0 @button-menu, 0 12px 0 0 @button-menu;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
-  background-color: fade(@button-menu, 30%);
-  box-shadow: 0 8px 0 0 fade(@button-menu, 30%), 0 16px 0 0 fade(@button-menu, 30%);
+  background-color: @button-menu;
+  box-shadow: 0 8px 0 0 @button-menu, 0 16px 0 0 @button-menu;
 }
 
 .main-nav__wrapper {
@@ -107,7 +103,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 2fr;
     grid-row-gap: 20px;
   }
 }

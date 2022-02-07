@@ -3,7 +3,6 @@
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   color: @font-regular;
-  margin-top: 31px;
   margin-bottom: 45px;
 
   @media (min-width: @tablet-width) {
@@ -12,7 +11,7 @@
     background-image: url("../img/review-feedback@1x.jpg");
     background-repeat: no-repeat;
     background-size: 350px 457px;
-    margin-bottom: 37px;
+    margin-bottom: 32px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/review-feedback@2x.jpg");
@@ -54,9 +53,13 @@
   @media (max-width: @mobile-width-only) {
     margin-top: 0;
     margin-bottom: 14px;
+    letter-spacing: 1px;
   }
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    top: 8px;
+    letter-spacing: 1px;
     font-size: 43px;
     line-height: 50px;
     margin: 0;
