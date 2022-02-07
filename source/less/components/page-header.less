@@ -1,4 +1,5 @@
 .page-header {
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -7,20 +8,14 @@
   box-sizing: border-box;
 
   @media (max-width: @mobile-width-only) {
-    width: 320px;
     border-top: 1px solid @thin-grey-line;
     border-bottom: 1px solid @thin-grey-line;
     display: block;
   }
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     padding: 0 50px;
     border: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1150px;
   }
 }
 
@@ -30,6 +25,19 @@
 
 .page-header--inner {
   background: linear-gradient(to bottom, @base-bg-color 0 87px, @thin-grey-line 87px 88px, @base-grey-color 88px);
+}
+
+.page-header--wrapper {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 768px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+  }
 }
 
 .page-header__link {
@@ -48,7 +56,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 500px;
+    left: 450px;
     top: 10px;
   }
 }

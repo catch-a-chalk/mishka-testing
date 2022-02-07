@@ -10,14 +10,22 @@
   padding-right: 30px;
   display: grid;
   grid-template-columns: 1fr;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+  }
 
   @media (min-width: @tablet-width) {
+    width: 768px;
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 72px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 1150px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 51px;
     margin-top: 133px;

@@ -17,66 +17,68 @@
 
     <body class="page__body">
       <header class="page-header page-header--general">
-        <a class="page-header__link" href="#" aria-label="На главную страницу">
-          <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
-          <svg class="page-header__logo page-header__logo--visible-phone" width="86" height="35">
-            <use href="img/sprite.svg#logo-mobile"></use>
-          </svg>
-          <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
-          <svg class="page-header__logo page-header__logo--visible-tablet" width="114" height="46">
-            <use href="img/sprite.svg#logo-tablet"></use>
-          </svg>
-          <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
-          <svg class="page-header__logo page-header__logo--visible-desktop" width="149" height="72">
-            <use href="img/sprite.svg#logo-desktop"></use>
-          </svg>
-        </a>
-        <!-- Можно добавить класс main-nav--closed -->
-        <!-- Можно добавить класс main-nav--opened -->
-        <!-- Можно добавить класс main-nav--nojs -->
-        <nav class="main-nav main-nav--opened main-nav--nojs">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a class="site-list__link" href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="form.html">Вязание на заказ</a>
-              </li>
-            </ul>
-            <ul class="main-nav__list user-list">
-              <li class="user-list__item">
-                <a class="user-list__link" href="search.html">
-                  <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
-                  <svg class="user-list__icon user-list__icon--search" width="18" height="18" aria-label="Иконка поиска" focusable="false">
-                    <use href="img/sprite.svg#icon-search"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="user-list__item">
-                <a class="user-list__link" href="cart.html">
-                  <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
-                  <svg class="user-list__icon user-list__icon--cart" width="21" height="18" aria-label="Иконка корзины заказов" focusable="false">
-                    <use href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                  <span class="user-list__text">Корзина: пока пуста</span>
-                </a>
-              </li>
-            </ul>
-            <ul class="main-nav__list main-nav__list--sub">
-              <li class="main-nav__item">
-                <a href="#">Новые поступления</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#">Распродажа</a>
-              </li>
-            </ul>
-            <div class="main-nav__list main-nav__list--option">Бесплатная доставка по России</div>
-          </div>
-        </nav>
+        <div class="page-header--wrapper">
+          <a class="page-header__link" href="#" aria-label="На главную страницу">
+            <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+            <svg class="page-header__logo page-header__logo--visible-phone" width="86" height="35">
+              <use href="img/sprite.svg#logo-mobile"></use>
+            </svg>
+            <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+            <svg class="page-header__logo page-header__logo--visible-tablet" width="114" height="46">
+              <use href="img/sprite.svg#logo-tablet"></use>
+            </svg>
+            <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+            <svg class="page-header__logo page-header__logo--visible-desktop" width="149" height="72">
+              <use href="img/sprite.svg#logo-desktop"></use>
+            </svg>
+          </a>
+          <!-- Можно добавить класс main-nav--closed -->
+          <!-- Можно добавить класс main-nav--opened -->
+          <!-- Можно добавить класс main-nav--nojs -->
+          <nav class="main-nav main-nav--opened main-nav--nojs">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list site-list">
+                <li class="site-list__item">
+                  <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link" href="form.html">Вязание на заказ</a>
+                </li>
+              </ul>
+              <ul class="main-nav__list user-list">
+                <li class="user-list__item">
+                  <a class="user-list__link" href="search.html">
+                    <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+                    <svg class="user-list__icon user-list__icon--search" width="18" height="18" aria-label="Иконка поиска" focusable="false">
+                      <use href="img/sprite.svg#icon-search"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="user-list__item">
+                  <a class="user-list__link" href="cart.html">
+                    <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+                    <svg class="user-list__icon user-list__icon--cart" width="21" height="18" aria-label="Иконка корзины заказов" focusable="false">
+                      <use href="img/sprite.svg#icon-cart"></use>
+                    </svg>
+                    <span class="user-list__text">Корзина: пока пуста</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="main-nav__list main-nav__list--sub">
+                <li class="main-nav__item">
+                  <a href="#">Новые поступления</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#">Распродажа</a>
+                </li>
+              </ul>
+              <div class="main-nav__list main-nav__list--option">Бесплатная доставка по России</div>
+            </div>
+          </nav>
+        </div>
       </header>
 
       <main class="page-main">
@@ -87,14 +89,18 @@
               <h2 class="main-header__title">Милые штуки <span class="main-header__span">ручной</span> работы для дома</h2>
             </header>
             <ul class="main-header__list">
-              <li class="main-header__item main-header__item--interior">
-                <span class="main-header__text main-header__text--interior">Предметы<br>интерьера</span>
-                <div class="main-header__interior-image"></div>
-              </li>
-              <li class="main-header__item main-header__item--toys">
-                <span class="main-header__text main-header__text--toys">Детские<br>игрушки</span>
-                <div class="main-header__toys-image"></div>
-              </li>
+              <div class="main-header__container main-header__container--interior">
+                <li class="main-header__item main-header__item--interior">
+                  <span class="main-header__text main-header__text--interior">Предметы<br>интерьера</span>
+                  <div class="main-header__interior-image"></div>
+                </li>
+              </div>
+              <div class="main-header__container main-header__container--toys">
+                <li class="main-header__item main-header__item--toys">
+                  <span class="main-header__text main-header__text--toys">Детские<br>игрушки</span>
+                  <div class="main-header__toys-image"></div>
+                </li>
+              </div>
             </ul>
             <div class="main-header-bottom"></div>
           </div>
