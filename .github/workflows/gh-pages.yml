@@ -27,11 +27,11 @@ jobs:
         run: npm test
 
       - name: Building
-        run: npm run build
+        run: npm run start
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          folder: ./build
+          folder: ./source
           branch: gh-pages
